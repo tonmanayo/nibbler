@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.0.0)
+project (SDL)
+set(CMAKE_BUILD_TYPE Release)
+include_directories(inc)
+file(GLOB SOURCES src/*.cpp)
+add_library(SDL MODULE ${SOURCES})

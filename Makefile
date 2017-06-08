@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /nfs/zfs-student-6/users/kgani/.brew/Cellar/cmake/3.8.2/bin/cmake
+CMAKE_COMMAND = /usr/local/Cellar/cmake/3.8.2/bin/cmake
 
 # The command to remove a file.
-RM = /nfs/zfs-student-6/users/kgani/.brew/Cellar/cmake/3.8.2/bin/cmake -E remove -f
+RM = /usr/local/Cellar/cmake/3.8.2/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /nfs/zfs-student-6/users/kgani/CLionProjects/Nibbler
+CMAKE_SOURCE_DIR = /Users/kyle/wethinkcode-projects/nibbler
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /nfs/zfs-student-6/users/kgani/CLionProjects/Nibbler
+CMAKE_BINARY_DIR = /Users/kyle/wethinkcode-projects/nibbler
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /nfs/zfs-student-6/users/kgani/CLionProjects/Nibbler
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/nfs/zfs-student-6/users/kgani/.brew/Cellar/cmake/3.8.2/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/Cellar/cmake/3.8.2/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/nfs/zfs-student-6/users/kgani/.brew/Cellar/cmake/3.8.2/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/local/Cellar/cmake/3.8.2/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/zfs-student-6/users/kgani/CLionProjects/Nibbler/CMakeFiles /nfs/zfs-student-6/users/kgani/CLionProjects/Nibbler/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kyle/wethinkcode-projects/nibbler/CMakeFiles /Users/kyle/wethinkcode-projects/nibbler/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/zfs-student-6/users/kgani/CLionProjects/Nibbler/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kyle/wethinkcode-projects/nibbler/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,6 +123,87 @@ nibbler/fast:
 	$(MAKE) -f CMakeFiles/nibbler.dir/build.make CMakeFiles/nibbler.dir/build
 .PHONY : nibbler/fast
 
+src/GameEngine.o: src/GameEngine.cpp.o
+
+.PHONY : src/GameEngine.o
+
+# target to build an object file
+src/GameEngine.cpp.o:
+	$(MAKE) -f CMakeFiles/nibbler.dir/build.make CMakeFiles/nibbler.dir/src/GameEngine.cpp.o
+.PHONY : src/GameEngine.cpp.o
+
+src/GameEngine.i: src/GameEngine.cpp.i
+
+.PHONY : src/GameEngine.i
+
+# target to preprocess a source file
+src/GameEngine.cpp.i:
+	$(MAKE) -f CMakeFiles/nibbler.dir/build.make CMakeFiles/nibbler.dir/src/GameEngine.cpp.i
+.PHONY : src/GameEngine.cpp.i
+
+src/GameEngine.s: src/GameEngine.cpp.s
+
+.PHONY : src/GameEngine.s
+
+# target to generate assembly for a file
+src/GameEngine.cpp.s:
+	$(MAKE) -f CMakeFiles/nibbler.dir/build.make CMakeFiles/nibbler.dir/src/GameEngine.cpp.s
+.PHONY : src/GameEngine.cpp.s
+
+src/Snake.o: src/Snake.cpp.o
+
+.PHONY : src/Snake.o
+
+# target to build an object file
+src/Snake.cpp.o:
+	$(MAKE) -f CMakeFiles/nibbler.dir/build.make CMakeFiles/nibbler.dir/src/Snake.cpp.o
+.PHONY : src/Snake.cpp.o
+
+src/Snake.i: src/Snake.cpp.i
+
+.PHONY : src/Snake.i
+
+# target to preprocess a source file
+src/Snake.cpp.i:
+	$(MAKE) -f CMakeFiles/nibbler.dir/build.make CMakeFiles/nibbler.dir/src/Snake.cpp.i
+.PHONY : src/Snake.cpp.i
+
+src/Snake.s: src/Snake.cpp.s
+
+.PHONY : src/Snake.s
+
+# target to generate assembly for a file
+src/Snake.cpp.s:
+	$(MAKE) -f CMakeFiles/nibbler.dir/build.make CMakeFiles/nibbler.dir/src/Snake.cpp.s
+.PHONY : src/Snake.cpp.s
+
+src/SnakePart.o: src/SnakePart.cpp.o
+
+.PHONY : src/SnakePart.o
+
+# target to build an object file
+src/SnakePart.cpp.o:
+	$(MAKE) -f CMakeFiles/nibbler.dir/build.make CMakeFiles/nibbler.dir/src/SnakePart.cpp.o
+.PHONY : src/SnakePart.cpp.o
+
+src/SnakePart.i: src/SnakePart.cpp.i
+
+.PHONY : src/SnakePart.i
+
+# target to preprocess a source file
+src/SnakePart.cpp.i:
+	$(MAKE) -f CMakeFiles/nibbler.dir/build.make CMakeFiles/nibbler.dir/src/SnakePart.cpp.i
+.PHONY : src/SnakePart.cpp.i
+
+src/SnakePart.s: src/SnakePart.cpp.s
+
+.PHONY : src/SnakePart.s
+
+# target to generate assembly for a file
+src/SnakePart.cpp.s:
+	$(MAKE) -f CMakeFiles/nibbler.dir/build.make CMakeFiles/nibbler.dir/src/SnakePart.cpp.s
+.PHONY : src/SnakePart.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -159,6 +240,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... nibbler"
+	@echo "... src/GameEngine.o"
+	@echo "... src/GameEngine.i"
+	@echo "... src/GameEngine.s"
+	@echo "... src/Snake.o"
+	@echo "... src/Snake.i"
+	@echo "... src/Snake.s"
+	@echo "... src/SnakePart.o"
+	@echo "... src/SnakePart.i"
+	@echo "... src/SnakePart.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
