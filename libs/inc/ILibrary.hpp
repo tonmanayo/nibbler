@@ -1,0 +1,8 @@
+//
+// Created by Kyle GANI on 2017/06/08.
+//
+
+#ifndef NIBBLER_ILIBRARY_HPP
+#define NIBBLER_ILIBRARY_HPP
+
+#endif //NIBBLER_ILIBRARY_HPP

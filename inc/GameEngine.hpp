@@ -1,0 +1,8 @@
+//
+// Created by Kyle GANI on 2017/06/08.
+//
+
+#ifndef NIBBLER_GAMEENGINE_HPP
+#define NIBBLER_GAMEENGINE_HPP
+
+#endif //NIBBLER_GAMEENGINE_HPP
