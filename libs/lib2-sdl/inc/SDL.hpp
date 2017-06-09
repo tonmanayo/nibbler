@@ -11,17 +11,20 @@
 
 class SDL : public ILibrary {
 public:
-	SDL();
 	SDL(int winWidth, int winHeight);
+	SDL(SDL const &sdl);
+	SDL &operator=(SDL const &src);
 	virtual ~SDL();
 
 	void        keyhook();
 	void        print();
 
 private:
+	SDL();
 	int         _winWidth;
 	int         _winHeight;
-	SDL_Window* _window;
+	SDL_Window*     _window;
+	SDL_Surface*    _windowSurface;
 };
 
 #ifdef __cplusplus

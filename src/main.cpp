@@ -38,6 +38,7 @@ int launchGame(int winWidth, int winHeight, int libID){
 	GameEngine *game = new GameEngine(winWidth, winHeight, libID);
 	if (!setLib(&game, libID))
 		return 0;
+	while (1);
 	delete game;
 	return 1;
 }
