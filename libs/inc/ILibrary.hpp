@@ -7,7 +7,7 @@
 
 class ILibrary{
 public:
-	virtual void keyhook() = 0;
+	virtual int keyhook() = 0;
 	virtual void print() = 0;
 	virtual ~ILibrary(){};
 };

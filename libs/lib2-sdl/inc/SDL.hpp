@@ -16,15 +16,16 @@ public:
 	SDL &operator=(SDL const &src);
 	virtual ~SDL();
 
-	void        keyhook();
-	void        print();
+	int             keyhook();
+	void            print();
 
 private:
 	SDL();
-	int         _winWidth;
-	int         _winHeight;
+	int             _winWidth;
+	int             _winHeight;
 	SDL_Window*     _window;
 	SDL_Surface*    _windowSurface;
+	SDL_Event      _windowEvent;
 };
 
 #ifdef __cplusplus

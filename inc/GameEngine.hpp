@@ -17,6 +17,7 @@ public:
 	void*       getLibHandler();
 	int         getWinWidth();
 	int         getWinHeight();
+	bool        getExit();
 
 	void        setLibrary(ILibrary* library);
 	void        setLibHandler(void* libHandler);

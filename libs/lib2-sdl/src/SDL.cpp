@@ -6,8 +6,8 @@
 
 SDL::SDL(int winWidth, int winHeight) : _winWidth(winWidth), _winHeight(winHeight) {
 	std::cout << "initialized SDL library at Width: " << _winWidth << " and Height: " << winHeight << std::endl;
-	SDL_Init(SDL_INIT_VIDEO);
-	_window = SDL_CreateWindow("Nibbler - SDL", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, _winWidth, _winHeight, SDL_WINDOW_OPENGL);
+	SDL_Init(SDL_INIT_EVERYTHING);
+	_window = SDL_CreateWindow("Nibbler - SDL", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, _winWidth, _winHeight, SDL_WINDOW_BORDERLESS);
 	if (_window == NULL)
 		throw std::runtime_error("Could not open SDL window.");
 	_windowSurface = SDL_GetWindowSurface( _window );
@@ -23,20 +23,35 @@ SDL::~SDL() {
 	std::cout << "Deconstructed SDL library" << std::endl;
 }
 
-ILibrary *create(int winWidth, int winHeight){
-	return new SDL(winWidth, winHeight);
-}
-
-void destroy(ILibrary *library){
-	delete library;
-}
-
-void SDL::keyhook() {
-	return ;
+int SDL::keyhook() {
+	int ret = 1;
+	while( SDL_PollEvent( &this->_windowEvent) ){
+		switch( this->_windowEvent.type ){
+			case SDL_KEYDOWN:
+				switch(this->_windowEvent.key.keysym.sym) {
+					case SDLK_ESCAPE:
+						std::cout << "Escape Key pressed." << std::endl;
+						ret = 0;
+						break;
+				}
+				break;
+			case SDL_QUIT:
+				ret = 0;
+				std::cout << "Exit signal received" << std::endl;
+				break;
+			default:
+				break;
+		}
+	}
+	return ret;
 }
 
 void SDL::print() {
 
+}
+
+ILibrary *create(int winWidth, int winHeight){
+	return new SDL(winWidth, winHeight);
 }
 
 //TODO Add assignment operator logic for SDL Library
