@@ -27,7 +27,7 @@ int setLib(GameEngine **gameEngine, int libID){
 	if (dlerror()){
 		throw std::runtime_error(dlerror());
 	} else {
-		game->setLibrary(createLib(game->getWinWidth(), game->getWinHeight()));
+		game->setLibrary(createLib(game->getWinWidth(), game->getWinHeight(), game->getSnake()));
 	}
 
 	dlerror();
@@ -41,6 +41,7 @@ int launchGame(int winWidth, int winHeight, int libID){
 	while (!game->getExit()){
 		if (!(game->getLibrary()->keyhook()))
 			break;
+        game->getLibrary()->print();
 	};
 	delete game;
 	return 1;

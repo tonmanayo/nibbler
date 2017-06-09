@@ -4,6 +4,7 @@
 
 #ifndef NIBBLER_ILIBRARY_HPP
 #define NIBBLER_ILIBRARY_HPP
+#include "Snake.hpp"
 
 class ILibrary{
 public:
@@ -12,7 +13,7 @@ public:
 	virtual ~ILibrary(){};
 };
 
-typedef ILibrary* createLib_t(int, int);
+typedef ILibrary* createLib_t(int, int, Snake*);
 typedef void destroyLib_t(ILibrary *library);
 
 #endif //NIBBLER_ILIBRARY_HPP

@@ -25,3 +25,11 @@ SnakePart& SnakePart::operator=(SnakePart const &src) {
 	}
 	return *this;
 }
+
+int SnakePart::getPosX() {
+	return this->_posX;
+}
+
+int SnakePart::getPosY() {
+	return this->_posY;
+}

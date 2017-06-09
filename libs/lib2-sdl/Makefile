@@ -123,6 +123,114 @@ SDL/fast:
 	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/build
 .PHONY : SDL/fast
 
+nfs/zfs-student-6/users/kgani/projects/nibbler/src/GameEngine.o: nfs/zfs-student-6/users/kgani/projects/nibbler/src/GameEngine.cpp.o
+
+.PHONY : nfs/zfs-student-6/users/kgani/projects/nibbler/src/GameEngine.o
+
+# target to build an object file
+nfs/zfs-student-6/users/kgani/projects/nibbler/src/GameEngine.cpp.o:
+	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/kgani/projects/nibbler/src/GameEngine.cpp.o
+.PHONY : nfs/zfs-student-6/users/kgani/projects/nibbler/src/GameEngine.cpp.o
+
+nfs/zfs-student-6/users/kgani/projects/nibbler/src/GameEngine.i: nfs/zfs-student-6/users/kgani/projects/nibbler/src/GameEngine.cpp.i
+
+.PHONY : nfs/zfs-student-6/users/kgani/projects/nibbler/src/GameEngine.i
+
+# target to preprocess a source file
+nfs/zfs-student-6/users/kgani/projects/nibbler/src/GameEngine.cpp.i:
+	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/kgani/projects/nibbler/src/GameEngine.cpp.i
+.PHONY : nfs/zfs-student-6/users/kgani/projects/nibbler/src/GameEngine.cpp.i
+
+nfs/zfs-student-6/users/kgani/projects/nibbler/src/GameEngine.s: nfs/zfs-student-6/users/kgani/projects/nibbler/src/GameEngine.cpp.s
+
+.PHONY : nfs/zfs-student-6/users/kgani/projects/nibbler/src/GameEngine.s
+
+# target to generate assembly for a file
+nfs/zfs-student-6/users/kgani/projects/nibbler/src/GameEngine.cpp.s:
+	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/kgani/projects/nibbler/src/GameEngine.cpp.s
+.PHONY : nfs/zfs-student-6/users/kgani/projects/nibbler/src/GameEngine.cpp.s
+
+nfs/zfs-student-6/users/kgani/projects/nibbler/src/Snake.o: nfs/zfs-student-6/users/kgani/projects/nibbler/src/Snake.cpp.o
+
+.PHONY : nfs/zfs-student-6/users/kgani/projects/nibbler/src/Snake.o
+
+# target to build an object file
+nfs/zfs-student-6/users/kgani/projects/nibbler/src/Snake.cpp.o:
+	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/kgani/projects/nibbler/src/Snake.cpp.o
+.PHONY : nfs/zfs-student-6/users/kgani/projects/nibbler/src/Snake.cpp.o
+
+nfs/zfs-student-6/users/kgani/projects/nibbler/src/Snake.i: nfs/zfs-student-6/users/kgani/projects/nibbler/src/Snake.cpp.i
+
+.PHONY : nfs/zfs-student-6/users/kgani/projects/nibbler/src/Snake.i
+
+# target to preprocess a source file
+nfs/zfs-student-6/users/kgani/projects/nibbler/src/Snake.cpp.i:
+	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/kgani/projects/nibbler/src/Snake.cpp.i
+.PHONY : nfs/zfs-student-6/users/kgani/projects/nibbler/src/Snake.cpp.i
+
+nfs/zfs-student-6/users/kgani/projects/nibbler/src/Snake.s: nfs/zfs-student-6/users/kgani/projects/nibbler/src/Snake.cpp.s
+
+.PHONY : nfs/zfs-student-6/users/kgani/projects/nibbler/src/Snake.s
+
+# target to generate assembly for a file
+nfs/zfs-student-6/users/kgani/projects/nibbler/src/Snake.cpp.s:
+	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/kgani/projects/nibbler/src/Snake.cpp.s
+.PHONY : nfs/zfs-student-6/users/kgani/projects/nibbler/src/Snake.cpp.s
+
+nfs/zfs-student-6/users/kgani/projects/nibbler/src/SnakePart.o: nfs/zfs-student-6/users/kgani/projects/nibbler/src/SnakePart.cpp.o
+
+.PHONY : nfs/zfs-student-6/users/kgani/projects/nibbler/src/SnakePart.o
+
+# target to build an object file
+nfs/zfs-student-6/users/kgani/projects/nibbler/src/SnakePart.cpp.o:
+	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/kgani/projects/nibbler/src/SnakePart.cpp.o
+.PHONY : nfs/zfs-student-6/users/kgani/projects/nibbler/src/SnakePart.cpp.o
+
+nfs/zfs-student-6/users/kgani/projects/nibbler/src/SnakePart.i: nfs/zfs-student-6/users/kgani/projects/nibbler/src/SnakePart.cpp.i
+
+.PHONY : nfs/zfs-student-6/users/kgani/projects/nibbler/src/SnakePart.i
+
+# target to preprocess a source file
+nfs/zfs-student-6/users/kgani/projects/nibbler/src/SnakePart.cpp.i:
+	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/kgani/projects/nibbler/src/SnakePart.cpp.i
+.PHONY : nfs/zfs-student-6/users/kgani/projects/nibbler/src/SnakePart.cpp.i
+
+nfs/zfs-student-6/users/kgani/projects/nibbler/src/SnakePart.s: nfs/zfs-student-6/users/kgani/projects/nibbler/src/SnakePart.cpp.s
+
+.PHONY : nfs/zfs-student-6/users/kgani/projects/nibbler/src/SnakePart.s
+
+# target to generate assembly for a file
+nfs/zfs-student-6/users/kgani/projects/nibbler/src/SnakePart.cpp.s:
+	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/kgani/projects/nibbler/src/SnakePart.cpp.s
+.PHONY : nfs/zfs-student-6/users/kgani/projects/nibbler/src/SnakePart.cpp.s
+
+nfs/zfs-student-6/users/kgani/projects/nibbler/src/main.o: nfs/zfs-student-6/users/kgani/projects/nibbler/src/main.cpp.o
+
+.PHONY : nfs/zfs-student-6/users/kgani/projects/nibbler/src/main.o
+
+# target to build an object file
+nfs/zfs-student-6/users/kgani/projects/nibbler/src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/kgani/projects/nibbler/src/main.cpp.o
+.PHONY : nfs/zfs-student-6/users/kgani/projects/nibbler/src/main.cpp.o
+
+nfs/zfs-student-6/users/kgani/projects/nibbler/src/main.i: nfs/zfs-student-6/users/kgani/projects/nibbler/src/main.cpp.i
+
+.PHONY : nfs/zfs-student-6/users/kgani/projects/nibbler/src/main.i
+
+# target to preprocess a source file
+nfs/zfs-student-6/users/kgani/projects/nibbler/src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/kgani/projects/nibbler/src/main.cpp.i
+.PHONY : nfs/zfs-student-6/users/kgani/projects/nibbler/src/main.cpp.i
+
+nfs/zfs-student-6/users/kgani/projects/nibbler/src/main.s: nfs/zfs-student-6/users/kgani/projects/nibbler/src/main.cpp.s
+
+.PHONY : nfs/zfs-student-6/users/kgani/projects/nibbler/src/main.s
+
+# target to generate assembly for a file
+nfs/zfs-student-6/users/kgani/projects/nibbler/src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/kgani/projects/nibbler/src/main.cpp.s
+.PHONY : nfs/zfs-student-6/users/kgani/projects/nibbler/src/main.cpp.s
+
 src/SDL.o: src/SDL.cpp.o
 
 .PHONY : src/SDL.o
@@ -159,6 +267,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... SDL"
+	@echo "... nfs/zfs-student-6/users/kgani/projects/nibbler/src/GameEngine.o"
+	@echo "... nfs/zfs-student-6/users/kgani/projects/nibbler/src/GameEngine.i"
+	@echo "... nfs/zfs-student-6/users/kgani/projects/nibbler/src/GameEngine.s"
+	@echo "... nfs/zfs-student-6/users/kgani/projects/nibbler/src/Snake.o"
+	@echo "... nfs/zfs-student-6/users/kgani/projects/nibbler/src/Snake.i"
+	@echo "... nfs/zfs-student-6/users/kgani/projects/nibbler/src/Snake.s"
+	@echo "... nfs/zfs-student-6/users/kgani/projects/nibbler/src/SnakePart.o"
+	@echo "... nfs/zfs-student-6/users/kgani/projects/nibbler/src/SnakePart.i"
+	@echo "... nfs/zfs-student-6/users/kgani/projects/nibbler/src/SnakePart.s"
+	@echo "... nfs/zfs-student-6/users/kgani/projects/nibbler/src/main.o"
+	@echo "... nfs/zfs-student-6/users/kgani/projects/nibbler/src/main.i"
+	@echo "... nfs/zfs-student-6/users/kgani/projects/nibbler/src/main.s"
 	@echo "... src/SDL.o"
 	@echo "... src/SDL.i"
 	@echo "... src/SDL.s"

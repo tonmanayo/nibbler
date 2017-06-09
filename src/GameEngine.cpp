@@ -54,6 +54,10 @@ void GameEngine::setWinHeight(int winHeight) {
 	this->_winHeight = winHeight;
 }
 
+Snake* GameEngine::getSnake() {
+    return this->_snake;
+}
+
 bool GameEngine::getExit() {
 	return this->_exit;
 }

@@ -11,7 +11,7 @@
 
 class SDL : public ILibrary {
 public:
-	SDL(int winWidth, int winHeight);
+	SDL(int winWidth, int winHeight, Snake* snake);
 	SDL(SDL const &sdl);
 	SDL &operator=(SDL const &src);
 	virtual ~SDL();
@@ -23,6 +23,7 @@ private:
 	SDL();
 	int             _winWidth;
 	int             _winHeight;
+    Snake*          _snake;
 	SDL_Window*     _window;
 	SDL_Surface*    _windowSurface;
 	SDL_Event      _windowEvent;
@@ -32,7 +33,7 @@ private:
 extern "C" {
 #endif
 
-extern "C" ILibrary* create(int winWidth, int WinHeight);
+extern "C" ILibrary* create(int winWidth, int WinHeight, Snake* snake);
 
 #ifdef __cplusplus
 }

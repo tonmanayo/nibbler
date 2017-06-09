@@ -12,6 +12,10 @@ public:
 	SnakePart(int posX, int posY, int direction);
 	SnakePart(SnakePart const &snakePart);
 	SnakePart &operator=(SnakePart const &src);
+
+	int getPosX();
+	int getPosY();
+
 	~SnakePart();
 private:
 	SnakePart();
