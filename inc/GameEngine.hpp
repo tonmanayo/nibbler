@@ -23,8 +23,6 @@ public:
 	void        setWinWidth(int winWidth);
 	void        setWinHeight(int winheight);
 
-	void        deleteLibrary();
-
 	~GameEngine();
 
 private:

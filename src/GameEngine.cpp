@@ -9,11 +9,15 @@ GameEngine::GameEngine(int winWidth, int winHeight, int libID) :
 		_winHeight(winHeight),
 		_libID(libID)
 {
+	std::cout << "Game constructed" << std::endl;
 	_snake = new Snake(_winHeight / 2, winWidth / 2);
 }
 
 GameEngine::~GameEngine() {
-
+	if (_library)
+		delete _library;
+	delete _snake;
+	std::cout << "Game Destructed." << std::endl;
 }
 
 ILibrary* GameEngine::getLibrary() {
@@ -47,8 +51,4 @@ int GameEngine::getWinHeight() {
 
 void GameEngine::setWinHeight(int winHeight) {
 	this->_winHeight = winHeight;
-}
-
-void GameEngine::deleteLibrary() {
-	delete this->_library;
 }

@@ -9,7 +9,6 @@ SnakePart::SnakePart(SnakePart const &snakePart) {
 }
 
 SnakePart::~SnakePart() {
-
 }
 
 SnakePart::SnakePart(int posX, int posY, int direction) :

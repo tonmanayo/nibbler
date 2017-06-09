@@ -15,7 +15,10 @@ public:
 	Snake(Snake const &snake);
 	Snake &operator=(Snake const &src);
 
-	void growSnake();
+	std::vector<SnakePart>  getParts();
+	int                     getLength();
+
+	void        setLength(int newLength);
 
 	~Snake();
 private:

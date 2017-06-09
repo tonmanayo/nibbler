@@ -30,8 +30,6 @@ int setLib(GameEngine **gameEngine, int libID){
 		game->setLibrary(createLib(game->getWinWidth(), game->getWinHeight()));
 	}
 
-	//TODO call delete functionality when needed
-
 	dlerror();
 	return 1;
 }
@@ -40,8 +38,6 @@ int launchGame(int winWidth, int winHeight, int libID){
 	GameEngine *game = new GameEngine(winWidth, winHeight, libID);
 	if (!setLib(&game, libID))
 		return 0;
-	if (game->getLibrary())
-		game->deleteLibrary();
 	delete game;
 	return 1;
 }
