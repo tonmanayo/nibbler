@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.8.2/bin/cmake
+CMAKE_COMMAND = /nfs/zfs-student-6/users/kgani/.brew/Cellar/cmake/3.8.2/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.8.2/bin/cmake -E remove -f
+RM = /nfs/zfs-student-6/users/kgani/.brew/Cellar/cmake/3.8.2/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/kyle/wethinkcode-projects/nibbler
+CMAKE_SOURCE_DIR = /nfs/zfs-student-6/users/kgani/projects/nibbler
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/kyle/wethinkcode-projects/nibbler
+CMAKE_BINARY_DIR = /nfs/zfs-student-6/users/kgani/projects/nibbler
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/kyle/wethinkcode-projects/nibbler
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/Cellar/cmake/3.8.2/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/nfs/zfs-student-6/users/kgani/.brew/Cellar/cmake/3.8.2/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/local/Cellar/cmake/3.8.2/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/nfs/zfs-student-6/users/kgani/.brew/Cellar/cmake/3.8.2/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kyle/wethinkcode-projects/nibbler/CMakeFiles /Users/kyle/wethinkcode-projects/nibbler/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/zfs-student-6/users/kgani/projects/nibbler/CMakeFiles /nfs/zfs-student-6/users/kgani/projects/nibbler/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kyle/wethinkcode-projects/nibbler/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/zfs-student-6/users/kgani/projects/nibbler/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

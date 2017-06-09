@@ -5,7 +5,7 @@
 #ifndef NIBBLER_SDL_HPP
 #define NIBBLER_SDL_HPP
 
-#include <SDL2/SDL.h>
+#include "SDL.h"
 #include <iostream>
 #include "../../inc/ILibrary.hpp"
 
