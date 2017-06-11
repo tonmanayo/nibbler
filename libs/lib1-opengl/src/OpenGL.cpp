@@ -2,7 +2,7 @@
 // Created by Kyle GANI on 2017/06/08.
 //
 
-int keyhook(){
+int OpenGL::keyhook(){
 	unsigned int direction = 0;
 	if(ev.type == ALLEGRO_EVENT_KEY_DOWN) {
 		switch(ev.keyboard.keycode) {
@@ -20,7 +20,7 @@ int keyhook(){
 	return direction;
 }
 
-void print(std::vector<SnakePart*> snakeParts){
+void OpenGL::print(std::vector<SnakePart*> snakeParts){
 	if(redraw && al_is_event_queue_empty(event_queue)) {
 			al_clear_to_color(al_map_rgb(0,0,0));
 		for (auto i = snakeParts.begin(); i < snakeParts.end(); i++){
@@ -94,3 +94,5 @@ OpenGL::OpenGL(int width, int height) : _winWidth(width), _winHeight(height)
 ILibrary *create(int winWidth, int winHeight){
 	return new OpenGL(winWidth, winHeight);
 }
+
+//g++ -Wall main.cpp -I/usr/include/allegro5 -L/usr/lib -lallegro -lallegro_image -lallegro_primitives
