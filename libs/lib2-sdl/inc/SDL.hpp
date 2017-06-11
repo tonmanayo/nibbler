@@ -7,25 +7,25 @@
 
 #include "SDL.h"
 #include <iostream>
+#include <vector>
 #include "../../inc/ILibrary.hpp"
 
 class SDL : public ILibrary {
 public:
-	SDL(int winWidth, int winHeight, Snake* snake);
+	SDL(int winWidth, int winHeight);
 	SDL(SDL const &sdl);
 	SDL &operator=(SDL const &src);
 	virtual ~SDL();
 
 	int             keyhook();
-	void            print();
+	void            print(std::vector<SnakePart*> snakeParts);
 
 private:
 	SDL();
 	int             _winWidth;
 	int             _winHeight;
-    Snake*          _snake;
 	SDL_Window*     _window;
-	SDL_Surface*    _windowSurface;
+	SDL_Renderer*    _windowRenderer;
 	SDL_Event      _windowEvent;
 };
 
@@ -33,7 +33,7 @@ private:
 extern "C" {
 #endif
 
-extern "C" ILibrary* create(int winWidth, int WinHeight, Snake* snake);
+extern "C" ILibrary* create(int winWidth, int WinHeight);
 
 #ifdef __cplusplus
 }

@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.0.0)
 project (SDL)
 set(CMAKE_BUILD_TYPE Release)
+set (CMAKE_CXX_STANDARD 11)
 set(SDL2_INCLUDE_DIR ~/.brew/Cellar/sdl2/2.0.5/include/SDL2/)
 set(SDL2_LIBRARY ~/.brew/Cellar/sdl2/2.0.5/lib/libSDL2.dylib)
 find_package(SDL2 REQUIRED)

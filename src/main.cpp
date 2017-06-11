@@ -2,6 +2,9 @@
 #include <exception>
 #include <GameEngine.hpp>
 #include <dlfcn.h>
+#include <chrono>
+#include <thread>
+#include <unistd.h>
 
 int setLib(GameEngine **gameEngine, int libID){
 	GameEngine *game = *gameEngine;
@@ -27,7 +30,7 @@ int setLib(GameEngine **gameEngine, int libID){
 	if (dlerror()){
 		throw std::runtime_error(dlerror());
 	} else {
-		game->setLibrary(createLib(game->getWinWidth(), game->getWinHeight(), game->getSnake()));
+		game->setLibrary(createLib(game->getWinWidth(), game->getWinHeight()));
 	}
 
 	dlerror();
@@ -36,12 +39,15 @@ int setLib(GameEngine **gameEngine, int libID){
 
 int launchGame(int winWidth, int winHeight, int libID){
 	GameEngine *game = new GameEngine(winWidth, winHeight, libID);
+	int direction;
 	if (!setLib(&game, libID))
 		return 0;
 	while (!game->getExit()){
-		if (!(game->getLibrary()->keyhook()))
+		usleep(33333);
+		if ((direction = game->getLibrary()->keyhook()) < 0)
 			break;
-        game->getLibrary()->print();
+		game->getSnake()->update(direction);
+		game->getLibrary()->print(game->getSnake()->getParts());
 	};
 	delete game;
 	return 1;

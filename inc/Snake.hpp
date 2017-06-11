@@ -15,15 +15,17 @@ public:
 	Snake(Snake const &snake);
 	Snake &operator=(Snake const &src);
 
-	std::vector<SnakePart>  getParts();
+	std::vector<SnakePart*>  getParts();
 	int                     getLength();
 
 	void        setLength(int newLength);
 
+	void update(int direction);
+
 	~Snake();
 private:
 	Snake();
-	std::vector<SnakePart>  _parts;
+	std::vector<SnakePart*>  _parts;
 	int                     _length;
 };
 
