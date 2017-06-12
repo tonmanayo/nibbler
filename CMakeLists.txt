@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.0.0)
 project (nibbler)
 set (CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Werror -Wextra")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Werror -Wextra -ldl")
 include_directories(inc)
 file(GLOB SOURCES src/*.cpp)
 add_executable(nibbler ${SOURCES})

@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.8.2/bin/cmake
+CMAKE_COMMAND = /home/linuxbrew/.linuxbrew/Cellar/cmake/3.8.2/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.8.2/bin/cmake -E remove -f
+RM = /home/linuxbrew/.linuxbrew/Cellar/cmake/3.8.2/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/kyle/wethinkcode-projects/nibbler/libs/lib1-opengl
+CMAKE_SOURCE_DIR = /home/tony/Projects/nibbler/libs/lib1-opengl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/kyle/wethinkcode-projects/nibbler/libs/lib1-opengl
+CMAKE_BINARY_DIR = /home/tony/Projects/nibbler/libs/lib1-opengl
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/kyle/wethinkcode-projects/nibbler/libs/lib1-opengl
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/Cellar/cmake/3.8.2/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/linuxbrew/.linuxbrew/Cellar/cmake/3.8.2/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/local/Cellar/cmake/3.8.2/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/linuxbrew/.linuxbrew/Cellar/cmake/3.8.2/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kyle/wethinkcode-projects/nibbler/libs/lib1-opengl/CMakeFiles /Users/kyle/wethinkcode-projects/nibbler/libs/lib1-opengl/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tony/Projects/nibbler/libs/lib1-opengl/CMakeFiles /home/tony/Projects/nibbler/libs/lib1-opengl/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kyle/wethinkcode-projects/nibbler/libs/lib1-opengl/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tony/Projects/nibbler/libs/lib1-opengl/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,113 +123,113 @@ OpenGL/fast:
 	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/build
 .PHONY : OpenGL/fast
 
-Users/kyle/wethinkcode-projects/nibbler/src/GameEngine.o: Users/kyle/wethinkcode-projects/nibbler/src/GameEngine.cpp.o
+home/tony/Projects/nibbler/src/GameEngine.o: home/tony/Projects/nibbler/src/GameEngine.cpp.o
 
-.PHONY : Users/kyle/wethinkcode-projects/nibbler/src/GameEngine.o
-
-# target to build an object file
-Users/kyle/wethinkcode-projects/nibbler/src/GameEngine.cpp.o:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/Users/kyle/wethinkcode-projects/nibbler/src/GameEngine.cpp.o
-.PHONY : Users/kyle/wethinkcode-projects/nibbler/src/GameEngine.cpp.o
-
-Users/kyle/wethinkcode-projects/nibbler/src/GameEngine.i: Users/kyle/wethinkcode-projects/nibbler/src/GameEngine.cpp.i
-
-.PHONY : Users/kyle/wethinkcode-projects/nibbler/src/GameEngine.i
-
-# target to preprocess a source file
-Users/kyle/wethinkcode-projects/nibbler/src/GameEngine.cpp.i:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/Users/kyle/wethinkcode-projects/nibbler/src/GameEngine.cpp.i
-.PHONY : Users/kyle/wethinkcode-projects/nibbler/src/GameEngine.cpp.i
-
-Users/kyle/wethinkcode-projects/nibbler/src/GameEngine.s: Users/kyle/wethinkcode-projects/nibbler/src/GameEngine.cpp.s
-
-.PHONY : Users/kyle/wethinkcode-projects/nibbler/src/GameEngine.s
-
-# target to generate assembly for a file
-Users/kyle/wethinkcode-projects/nibbler/src/GameEngine.cpp.s:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/Users/kyle/wethinkcode-projects/nibbler/src/GameEngine.cpp.s
-.PHONY : Users/kyle/wethinkcode-projects/nibbler/src/GameEngine.cpp.s
-
-Users/kyle/wethinkcode-projects/nibbler/src/Snake.o: Users/kyle/wethinkcode-projects/nibbler/src/Snake.cpp.o
-
-.PHONY : Users/kyle/wethinkcode-projects/nibbler/src/Snake.o
+.PHONY : home/tony/Projects/nibbler/src/GameEngine.o
 
 # target to build an object file
-Users/kyle/wethinkcode-projects/nibbler/src/Snake.cpp.o:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/Users/kyle/wethinkcode-projects/nibbler/src/Snake.cpp.o
-.PHONY : Users/kyle/wethinkcode-projects/nibbler/src/Snake.cpp.o
+home/tony/Projects/nibbler/src/GameEngine.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/home/tony/Projects/nibbler/src/GameEngine.cpp.o
+.PHONY : home/tony/Projects/nibbler/src/GameEngine.cpp.o
 
-Users/kyle/wethinkcode-projects/nibbler/src/Snake.i: Users/kyle/wethinkcode-projects/nibbler/src/Snake.cpp.i
+home/tony/Projects/nibbler/src/GameEngine.i: home/tony/Projects/nibbler/src/GameEngine.cpp.i
 
-.PHONY : Users/kyle/wethinkcode-projects/nibbler/src/Snake.i
+.PHONY : home/tony/Projects/nibbler/src/GameEngine.i
 
 # target to preprocess a source file
-Users/kyle/wethinkcode-projects/nibbler/src/Snake.cpp.i:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/Users/kyle/wethinkcode-projects/nibbler/src/Snake.cpp.i
-.PHONY : Users/kyle/wethinkcode-projects/nibbler/src/Snake.cpp.i
+home/tony/Projects/nibbler/src/GameEngine.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/home/tony/Projects/nibbler/src/GameEngine.cpp.i
+.PHONY : home/tony/Projects/nibbler/src/GameEngine.cpp.i
 
-Users/kyle/wethinkcode-projects/nibbler/src/Snake.s: Users/kyle/wethinkcode-projects/nibbler/src/Snake.cpp.s
+home/tony/Projects/nibbler/src/GameEngine.s: home/tony/Projects/nibbler/src/GameEngine.cpp.s
 
-.PHONY : Users/kyle/wethinkcode-projects/nibbler/src/Snake.s
+.PHONY : home/tony/Projects/nibbler/src/GameEngine.s
 
 # target to generate assembly for a file
-Users/kyle/wethinkcode-projects/nibbler/src/Snake.cpp.s:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/Users/kyle/wethinkcode-projects/nibbler/src/Snake.cpp.s
-.PHONY : Users/kyle/wethinkcode-projects/nibbler/src/Snake.cpp.s
+home/tony/Projects/nibbler/src/GameEngine.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/home/tony/Projects/nibbler/src/GameEngine.cpp.s
+.PHONY : home/tony/Projects/nibbler/src/GameEngine.cpp.s
 
-Users/kyle/wethinkcode-projects/nibbler/src/SnakePart.o: Users/kyle/wethinkcode-projects/nibbler/src/SnakePart.cpp.o
+home/tony/Projects/nibbler/src/Snake.o: home/tony/Projects/nibbler/src/Snake.cpp.o
 
-.PHONY : Users/kyle/wethinkcode-projects/nibbler/src/SnakePart.o
+.PHONY : home/tony/Projects/nibbler/src/Snake.o
 
 # target to build an object file
-Users/kyle/wethinkcode-projects/nibbler/src/SnakePart.cpp.o:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/Users/kyle/wethinkcode-projects/nibbler/src/SnakePart.cpp.o
-.PHONY : Users/kyle/wethinkcode-projects/nibbler/src/SnakePart.cpp.o
+home/tony/Projects/nibbler/src/Snake.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/home/tony/Projects/nibbler/src/Snake.cpp.o
+.PHONY : home/tony/Projects/nibbler/src/Snake.cpp.o
 
-Users/kyle/wethinkcode-projects/nibbler/src/SnakePart.i: Users/kyle/wethinkcode-projects/nibbler/src/SnakePart.cpp.i
+home/tony/Projects/nibbler/src/Snake.i: home/tony/Projects/nibbler/src/Snake.cpp.i
 
-.PHONY : Users/kyle/wethinkcode-projects/nibbler/src/SnakePart.i
+.PHONY : home/tony/Projects/nibbler/src/Snake.i
 
 # target to preprocess a source file
-Users/kyle/wethinkcode-projects/nibbler/src/SnakePart.cpp.i:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/Users/kyle/wethinkcode-projects/nibbler/src/SnakePart.cpp.i
-.PHONY : Users/kyle/wethinkcode-projects/nibbler/src/SnakePart.cpp.i
+home/tony/Projects/nibbler/src/Snake.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/home/tony/Projects/nibbler/src/Snake.cpp.i
+.PHONY : home/tony/Projects/nibbler/src/Snake.cpp.i
 
-Users/kyle/wethinkcode-projects/nibbler/src/SnakePart.s: Users/kyle/wethinkcode-projects/nibbler/src/SnakePart.cpp.s
+home/tony/Projects/nibbler/src/Snake.s: home/tony/Projects/nibbler/src/Snake.cpp.s
 
-.PHONY : Users/kyle/wethinkcode-projects/nibbler/src/SnakePart.s
+.PHONY : home/tony/Projects/nibbler/src/Snake.s
 
 # target to generate assembly for a file
-Users/kyle/wethinkcode-projects/nibbler/src/SnakePart.cpp.s:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/Users/kyle/wethinkcode-projects/nibbler/src/SnakePart.cpp.s
-.PHONY : Users/kyle/wethinkcode-projects/nibbler/src/SnakePart.cpp.s
+home/tony/Projects/nibbler/src/Snake.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/home/tony/Projects/nibbler/src/Snake.cpp.s
+.PHONY : home/tony/Projects/nibbler/src/Snake.cpp.s
 
-Users/kyle/wethinkcode-projects/nibbler/src/main.o: Users/kyle/wethinkcode-projects/nibbler/src/main.cpp.o
+home/tony/Projects/nibbler/src/SnakePart.o: home/tony/Projects/nibbler/src/SnakePart.cpp.o
 
-.PHONY : Users/kyle/wethinkcode-projects/nibbler/src/main.o
+.PHONY : home/tony/Projects/nibbler/src/SnakePart.o
 
 # target to build an object file
-Users/kyle/wethinkcode-projects/nibbler/src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/Users/kyle/wethinkcode-projects/nibbler/src/main.cpp.o
-.PHONY : Users/kyle/wethinkcode-projects/nibbler/src/main.cpp.o
+home/tony/Projects/nibbler/src/SnakePart.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/home/tony/Projects/nibbler/src/SnakePart.cpp.o
+.PHONY : home/tony/Projects/nibbler/src/SnakePart.cpp.o
 
-Users/kyle/wethinkcode-projects/nibbler/src/main.i: Users/kyle/wethinkcode-projects/nibbler/src/main.cpp.i
+home/tony/Projects/nibbler/src/SnakePart.i: home/tony/Projects/nibbler/src/SnakePart.cpp.i
 
-.PHONY : Users/kyle/wethinkcode-projects/nibbler/src/main.i
+.PHONY : home/tony/Projects/nibbler/src/SnakePart.i
 
 # target to preprocess a source file
-Users/kyle/wethinkcode-projects/nibbler/src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/Users/kyle/wethinkcode-projects/nibbler/src/main.cpp.i
-.PHONY : Users/kyle/wethinkcode-projects/nibbler/src/main.cpp.i
+home/tony/Projects/nibbler/src/SnakePart.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/home/tony/Projects/nibbler/src/SnakePart.cpp.i
+.PHONY : home/tony/Projects/nibbler/src/SnakePart.cpp.i
 
-Users/kyle/wethinkcode-projects/nibbler/src/main.s: Users/kyle/wethinkcode-projects/nibbler/src/main.cpp.s
+home/tony/Projects/nibbler/src/SnakePart.s: home/tony/Projects/nibbler/src/SnakePart.cpp.s
 
-.PHONY : Users/kyle/wethinkcode-projects/nibbler/src/main.s
+.PHONY : home/tony/Projects/nibbler/src/SnakePart.s
 
 # target to generate assembly for a file
-Users/kyle/wethinkcode-projects/nibbler/src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/Users/kyle/wethinkcode-projects/nibbler/src/main.cpp.s
-.PHONY : Users/kyle/wethinkcode-projects/nibbler/src/main.cpp.s
+home/tony/Projects/nibbler/src/SnakePart.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/home/tony/Projects/nibbler/src/SnakePart.cpp.s
+.PHONY : home/tony/Projects/nibbler/src/SnakePart.cpp.s
+
+home/tony/Projects/nibbler/src/main.o: home/tony/Projects/nibbler/src/main.cpp.o
+
+.PHONY : home/tony/Projects/nibbler/src/main.o
+
+# target to build an object file
+home/tony/Projects/nibbler/src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/home/tony/Projects/nibbler/src/main.cpp.o
+.PHONY : home/tony/Projects/nibbler/src/main.cpp.o
+
+home/tony/Projects/nibbler/src/main.i: home/tony/Projects/nibbler/src/main.cpp.i
+
+.PHONY : home/tony/Projects/nibbler/src/main.i
+
+# target to preprocess a source file
+home/tony/Projects/nibbler/src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/home/tony/Projects/nibbler/src/main.cpp.i
+.PHONY : home/tony/Projects/nibbler/src/main.cpp.i
+
+home/tony/Projects/nibbler/src/main.s: home/tony/Projects/nibbler/src/main.cpp.s
+
+.PHONY : home/tony/Projects/nibbler/src/main.s
+
+# target to generate assembly for a file
+home/tony/Projects/nibbler/src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/home/tony/Projects/nibbler/src/main.cpp.s
+.PHONY : home/tony/Projects/nibbler/src/main.cpp.s
 
 src/OpenGL.o: src/OpenGL.cpp.o
 
@@ -267,18 +267,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... OpenGL"
-	@echo "... Users/kyle/wethinkcode-projects/nibbler/src/GameEngine.o"
-	@echo "... Users/kyle/wethinkcode-projects/nibbler/src/GameEngine.i"
-	@echo "... Users/kyle/wethinkcode-projects/nibbler/src/GameEngine.s"
-	@echo "... Users/kyle/wethinkcode-projects/nibbler/src/Snake.o"
-	@echo "... Users/kyle/wethinkcode-projects/nibbler/src/Snake.i"
-	@echo "... Users/kyle/wethinkcode-projects/nibbler/src/Snake.s"
-	@echo "... Users/kyle/wethinkcode-projects/nibbler/src/SnakePart.o"
-	@echo "... Users/kyle/wethinkcode-projects/nibbler/src/SnakePart.i"
-	@echo "... Users/kyle/wethinkcode-projects/nibbler/src/SnakePart.s"
-	@echo "... Users/kyle/wethinkcode-projects/nibbler/src/main.o"
-	@echo "... Users/kyle/wethinkcode-projects/nibbler/src/main.i"
-	@echo "... Users/kyle/wethinkcode-projects/nibbler/src/main.s"
+	@echo "... home/tony/Projects/nibbler/src/GameEngine.o"
+	@echo "... home/tony/Projects/nibbler/src/GameEngine.i"
+	@echo "... home/tony/Projects/nibbler/src/GameEngine.s"
+	@echo "... home/tony/Projects/nibbler/src/Snake.o"
+	@echo "... home/tony/Projects/nibbler/src/Snake.i"
+	@echo "... home/tony/Projects/nibbler/src/Snake.s"
+	@echo "... home/tony/Projects/nibbler/src/SnakePart.o"
+	@echo "... home/tony/Projects/nibbler/src/SnakePart.i"
+	@echo "... home/tony/Projects/nibbler/src/SnakePart.s"
+	@echo "... home/tony/Projects/nibbler/src/main.o"
+	@echo "... home/tony/Projects/nibbler/src/main.i"
+	@echo "... home/tony/Projects/nibbler/src/main.s"
 	@echo "... src/OpenGL.o"
 	@echo "... src/OpenGL.i"
 	@echo "... src/OpenGL.s"

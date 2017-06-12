@@ -4,7 +4,7 @@
 #include "../inc/OpenGL.hpp"
 
 
-OpenGL::OpenGL(int winWidth, int winHeight) : _winWidth(winWidth), _winHeight(winHeight), _blockSize(20), _FPS(60) {
+OpenGL::OpenGL(int winWidth, int winHeight) : _winWidth(winWidth), _winHeight(winHeight), _blockSize(20), _FPS(22) {
     std::cout << "initialized OpenGL library at Width: " << _winWidth << " and Height: " << _winHeight << std::endl;
 	_redraw = true;
 	if(!al_init()) {
@@ -74,6 +74,7 @@ int OpenGL::keyhook(){
 		switch(ev.keyboard.keycode) {
 			case ALLEGRO_KEY_UP:
 				direction = 1;
+				std::cout << "up\n";
 				break ;
 			case ALLEGRO_KEY_RIGHT:
 				direction = 2;
@@ -87,30 +88,31 @@ int OpenGL::keyhook(){
 			case ALLEGRO_KEY_ESCAPE:
 				direction = -1;
 				break;
+			default:
+				break ;
 		}
-		_redraw = true;
+
 	}
+	//_redraw = true;
 	return direction;
 }
 
 void OpenGL::print(std::vector<SnakePart*> snakeParts){
-	if(_redraw && al_is_event_queue_empty(_event_queue)) {
-		_redraw = false;
+	//if(_redraw && al_is_event_queue_empty(_event_queue)) {
+	//	_redraw = false;
 		al_clear_to_color(al_map_rgb(0,0,0));
 		for (auto i = snakeParts.begin(); i < snakeParts.end(); i++){
-			al_draw_bitmap(_box, (*i)->getPosX() - 20/2, (*i)->getPosY() + 20/2, 0);
+			al_draw_bitmap(_box, (*i)->getPosX() - 20/2 , (*i)->getPosY() + - 20/2 , 0);
 		}
 		al_flip_display();
-	}
+	//}
 }
 
 ILibrary *create(int winWidth, int winHeight){
 	return new OpenGL(winWidth, winHeight);
 }
 
-int main(int argc, char **argv){
-	return 0;
-}
+
 
 //g++ -Wall main.cpp -I/usr/include/allegro5 -L/usr/lib -lallegro -lallegro_image -lallegro_primitives
 //g++ -Wall main.cpp -I/nfs/zfs-student-6/users/tmack/.brew/Cellar/allegro/5.2.2/include -L/nfs/zfs-student-6/users/tmack/.brew/Cellar/allegro/5.2.2/lib -lallegro -lallegro_image -lallegro_primitives
