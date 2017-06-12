@@ -4,7 +4,7 @@
 #include "../inc/OpenGL.hpp"
 
 
-OpenGL::OpenGL(int width, int height) : _winWidth(width), _winHeight(height), _blockSize(20), _FPS(60) {
+OpenGL::OpenGL(int winWidth, int winHeight) : _winWidth(winWidth), _winHeight(winHeight), _blockSize(20), _FPS(60) {
     std::cout << "initialized OpenGL library at Width: " << _winWidth << " and Height: " << _winHeight << std::endl;
 	_redraw = true;
 	if(!al_init()) {

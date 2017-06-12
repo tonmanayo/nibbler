@@ -33,11 +33,10 @@ private:
 extern "C" {
 #endif
 
-extern "C" ILibrary* create(int winWidth, int WinHeight);
+ILibrary* create(int winWidth, int winHeight);
 
 #ifdef __cplusplus
 }
 #endif
-
 
 #endif //NIBBLER_SDL_HPP

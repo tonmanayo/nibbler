@@ -34,11 +34,12 @@ private:
 	ALLEGRO_BITMAP      *_box;
 };
 
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-extern "C" ILibrary* create(int winWidth, int WinHeight);
+ILibrary* create(int winWidth, int winHeight);
 
 #ifdef __cplusplus
 }

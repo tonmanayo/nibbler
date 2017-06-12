@@ -23,7 +23,7 @@ public:
 	void        setLibrary(ILibrary* library);
 	void        setLibHandler(void* libHandler);
 	void        setWinWidth(int winWidth);
-	void        setWinHeight(int winheight);
+	void        setWinHeight(int winHeight);
 
 	~GameEngine();
 

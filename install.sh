@@ -8,6 +8,12 @@ if which -s brew > /dev/null ; then
         echo Installing SDL2
         brew install sdl2
     fi
+    if brew ls --versions allegro  > /dev/null; then
+        echo Allegro already installed
+    else
+        echo Installing Allegro
+        brew install allegro
+    fi
 else
     echo Installing Homebrew
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/Tolsadus/42homebrewfix/master/install.sh)"

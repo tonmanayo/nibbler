@@ -9,19 +9,19 @@ int setLib(GameEngine **gameEngine, int libID){
 	std::cout << "Your Lib: " << libID << std::endl;
 	switch (libID){
 		case 1:
-			std::cout << "1. OpenGL" << std::endl;
-			game->setLibHandler(dlopen("libs/lib2-sdl/libOpenGl.so", RTLD_NOW));
+			game->setLibHandler(dlopen("libs/lib1-opengl/libOpenGL.so", RTLD_NOW));
 			break ;
 		case 2:
-			std::cout << "2. SDL" << std::endl;
 			game->setLibHandler(dlopen("libs/lib2-sdl/libSDL.so", RTLD_NOW));
 			break ;
 		case 3:
-			std::cout << "3. SFML" << std::endl;
-			game->setLibHandler(dlopen("libs/lib2-sdl/libSFML.so", RTLD_NOW));
+			game->setLibHandler(dlopen("libs/lib3-sfml/libSFML.so", RTLD_NOW));
 			break ;
+		default:
+			break;
 	}
 	if (!game->getLibHandler()) {
+		std::cout << dlerror() << std::endl;
 		throw std::runtime_error("Could not create Library handler.");
 	}
 	createLib_t* createLib = (createLib_t*) dlsym(game->getLibHandler(), "create");
