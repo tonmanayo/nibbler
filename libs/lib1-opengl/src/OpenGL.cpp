@@ -108,5 +108,9 @@ ILibrary *create(int winWidth, int winHeight){
 	return new OpenGL(winWidth, winHeight);
 }
 
+int main(int argc, char **argv){
+	return 0;
+}
+
 //g++ -Wall main.cpp -I/usr/include/allegro5 -L/usr/lib -lallegro -lallegro_image -lallegro_primitives
 //g++ -Wall main.cpp -I/nfs/zfs-student-6/users/tmack/.brew/Cellar/allegro/5.2.2/include -L/nfs/zfs-student-6/users/tmack/.brew/Cellar/allegro/5.2.2/lib -lallegro -lallegro_image -lallegro_primitives
