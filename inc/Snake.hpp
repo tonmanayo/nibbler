@@ -21,6 +21,7 @@ public:
 	void        setLength(int newLength);
 
 	void update(int direction);
+	int  detectCollision(int winWidth, int winHeight);
 
 	~Snake();
 private:

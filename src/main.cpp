@@ -1,8 +1,6 @@
 #include <iostream>
-#include <exception>
 #include <GameEngine.hpp>
 #include <dlfcn.h>
-#include <chrono>
 #include <thread>
 #include <unistd.h>
 
@@ -47,6 +45,9 @@ int launchGame(int winWidth, int winHeight, int libID){
 		if ((direction = game->getLibrary()->keyhook()) < 0)
 			break;
 		game->getSnake()->update(direction);
+		if (game->getSnake()->detectCollision(winWidth, winHeight)){
+			break;
+		};
 		game->getLibrary()->print(game->getSnake()->getParts());
 	};
 	delete game;
