@@ -24,6 +24,10 @@ std::vector<SnakePart*> Snake::getParts() {
 }
 
 void Snake::update(int direction) {
+	if ((_parts[0]->getDirection() == UP && direction == DOWN) || (_parts[0]->getDirection() == DOWN && direction == UP) ||
+			(_parts[0]->getDirection() == RIGHT && direction == LEFT) || (_parts[0]->getDirection() == LEFT && direction == RIGHT)){
+		direction = _parts[0]->getDirection();
+	}
 	for (int i = _length - 1; i >= 0; i--){
 		if (i != 0) {
 			_parts[i]->setPosX(_parts[i - 1]->getPosX());
@@ -49,6 +53,15 @@ void Snake::update(int direction) {
 			}
 		}
 	}
+}
+
+int Snake::detectCollision(int winWidth, int winHeight) {
+	if (_parts[0]->getPosX() - (20/2) <= 0 || _parts[0]->getPosY() + (20/2) <= 0 ||
+			_parts[0]->getPosX() + (20/2) >= winWidth || _parts[0]->getPosY() + 20 >= winHeight){
+		std::cout << "collision detected" << std::endl;
+		return 1;
+	}
+	return 0;
 }
 
 int Snake::getLength() {

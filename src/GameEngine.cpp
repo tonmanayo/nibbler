@@ -11,7 +11,7 @@ GameEngine::GameEngine(int winWidth, int winHeight, int libID) :
         _exit(false)
 {
 	std::cout << "Game constructed" << std::endl;
-	_snake = new Snake(_winHeight / 2, winWidth / 2);
+	_snake = new Snake(_winWidth / 2, _winHeight / 2);
 }
 
 GameEngine::~GameEngine() {
