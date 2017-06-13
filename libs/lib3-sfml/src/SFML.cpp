@@ -4,7 +4,7 @@
 
 #include "../inc/SFML.hpp"
 
-SFML::SFML(int winWidth, int winHeight) : _winWidth(winWidth), _winHeight(winHeight), _window(sf::VideoMode(200, 200), "Nibbler!") ,_blockSize(20)
+SFML::SFML(int winHeight, int winWidth) : _blockSize(20), _winHeight(winHeight), _winWidth(winWidth), _window(sf::VideoMode(winHeight,winWidth), "Space Invaders!")
 {
 	std::cout << "initialized SFML library at Width: " << _winWidth << " and Height: " << _winHeight << std::endl;
 }
@@ -14,38 +14,45 @@ SFML::~SFML(){
 }
 
 int SFML::keyhook(){
-
-	//int direction = 0;
+	int direction = 0;
 	sf::Event ev;
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-		return 4;
+		direction = 4;
 	}
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-		return 2;
+		direction = 2;
 	}
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-		return 1;
+		direction = 1;
 	}
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-		return 3;
+		direction = 3;
 	} else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
-		return -1;
+		direction = -1;
 	}
 	if (ev.type == sf::Event::Closed){
 		_window.close();
-		return -1;
+		direction = -1;
 	}
-	return 0;
+	return direction;
 }
 
 void SFML::print(std::vector<SnakePart*> snakeParts){
-	sf::RectangleShape _shape(sf::Vector2f(_blockSize, _blockSize));
-	_shape.setPosition(_winHeight / 2,_winWidth / 2);
-	_shape.setFillColor(sf::Color::Green);
+
+	//_shape.setPosition(_winHeight / 2,_winWidth / 2);
+
+
 	for (auto i = snakeParts.begin(); i < snakeParts.end(); i++){
-		_shape.setPosition((*i)->getPosX() - 20/2,(*i)->getPosY() + - 20/2);
-		_window.clear();
+		sf::RectangleShape _shape(sf::Vector2f(_blockSize, _blockSize));
+		_shape.setFillColor(sf::Color::Green);
+		_shape.move((*i)->getPosX() - _blockSize/2,(*i)->getPosY() + - _blockSize/2);
+		//_window.clear();
 		_window.draw(_shape);
 	}
 	_window.display();
+
+}
+
+ILibrary *create(int winWidth, int winHeight){
+	return new SFML(winWidth, winHeight);
 }
