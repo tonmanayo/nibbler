@@ -123,6 +123,33 @@ OpenGL/fast:
 	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/build
 .PHONY : OpenGL/fast
 
+home/tony/Projects/nibbler/src/Food.o: home/tony/Projects/nibbler/src/Food.cpp.o
+
+.PHONY : home/tony/Projects/nibbler/src/Food.o
+
+# target to build an object file
+home/tony/Projects/nibbler/src/Food.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/home/tony/Projects/nibbler/src/Food.cpp.o
+.PHONY : home/tony/Projects/nibbler/src/Food.cpp.o
+
+home/tony/Projects/nibbler/src/Food.i: home/tony/Projects/nibbler/src/Food.cpp.i
+
+.PHONY : home/tony/Projects/nibbler/src/Food.i
+
+# target to preprocess a source file
+home/tony/Projects/nibbler/src/Food.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/home/tony/Projects/nibbler/src/Food.cpp.i
+.PHONY : home/tony/Projects/nibbler/src/Food.cpp.i
+
+home/tony/Projects/nibbler/src/Food.s: home/tony/Projects/nibbler/src/Food.cpp.s
+
+.PHONY : home/tony/Projects/nibbler/src/Food.s
+
+# target to generate assembly for a file
+home/tony/Projects/nibbler/src/Food.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/home/tony/Projects/nibbler/src/Food.cpp.s
+.PHONY : home/tony/Projects/nibbler/src/Food.cpp.s
+
 home/tony/Projects/nibbler/src/GameEngine.o: home/tony/Projects/nibbler/src/GameEngine.cpp.o
 
 .PHONY : home/tony/Projects/nibbler/src/GameEngine.o
@@ -267,6 +294,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... OpenGL"
+	@echo "... home/tony/Projects/nibbler/src/Food.o"
+	@echo "... home/tony/Projects/nibbler/src/Food.i"
+	@echo "... home/tony/Projects/nibbler/src/Food.s"
 	@echo "... home/tony/Projects/nibbler/src/GameEngine.o"
 	@echo "... home/tony/Projects/nibbler/src/GameEngine.i"
 	@echo "... home/tony/Projects/nibbler/src/GameEngine.s"
