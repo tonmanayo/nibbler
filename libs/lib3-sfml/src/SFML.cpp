@@ -4,8 +4,13 @@
 
 #include "../inc/SFML.hpp"
 
-SFML::SFML(int winHeight, int winWidth) : _blockSize(20), _winHeight(winHeight), _winWidth(winWidth), _window(sf::VideoMode(winHeight,winWidth), "Space Invaders!")
+SFML::SFML(int winHeight, int winWidth) : _blockSize(20), _winHeight(winHeight), _winWidth(winWidth)
 {
+	_window = RenderWindowPtr(new sf::RenderWindow);
+
+	_window->create(sf::VideoMode(winWidth, winHeight), "Nibbler!", sf::Style::Titlebar | sf::Style::Close);
+	_window->setFramerateLimit(60);
+	_window->setVerticalSyncEnabled(true);
 	std::cout << "initialized SFML library at Width: " << _winWidth << " and Height: " << _winHeight << std::endl;
 }
 
@@ -31,7 +36,7 @@ int SFML::keyhook(){
 		direction = -1;
 	}
 	if (ev.type == sf::Event::Closed){
-		_window.close();
+		_window->close();
 		direction = -1;
 	}
 	return direction;
@@ -39,17 +44,22 @@ int SFML::keyhook(){
 
 void SFML::print(std::vector<SnakePart*> snakeParts){
 
-	//_shape.setPosition(_winHeight / 2,_winWidth / 2);
 
+
+	_window->clear();
+
+	sf::RectangleShape _shape(sf::Vector2f(_blockSize, _blockSize));
+
+	_shape.setPosition(_winHeight / 2,_winWidth / 2);
+	_shape.setSize(sf::Vector2f(_blockSize, _blockSize));
+	_shape.setFillColor(sf::Color::Green);
 
 	for (auto i = snakeParts.begin(); i < snakeParts.end(); i++){
-		sf::RectangleShape _shape(sf::Vector2f(_blockSize, _blockSize));
-		_shape.setFillColor(sf::Color::Green);
-		_shape.move((*i)->getPosX() - _blockSize/2,(*i)->getPosY() + - _blockSize/2);
-		//_window.clear();
-		_window.draw(_shape);
+		//_shape.move((*i)->getPosX() - _blockSize/2,(*i)->getPosY() + - _blockSize/2);
+		_shape.setPosition((*i)->getPosX() , (*i)->getPosY() );
+		_window->draw(_shape);
 	}
-	_window.display();
+	_window->display();
 
 }
 

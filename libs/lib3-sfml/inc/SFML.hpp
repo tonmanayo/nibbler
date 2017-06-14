@@ -9,7 +9,10 @@
 #include <iostream>
 #include <cstdlib>
 #include <vector>
+#include <memory>
 #include "../../inc/ILibrary.hpp"
+
+typedef std::shared_ptr<sf::RenderWindow> RenderWindowPtr;
 
 class SFML : public ILibrary {
 public:
@@ -26,7 +29,7 @@ private:
 	const unsigned int _winWidth;
 	const unsigned int _winHeight;
 	const unsigned int _blockSize;
-	sf::RenderWindow _window;
+	RenderWindowPtr _window;
 };
 
 
