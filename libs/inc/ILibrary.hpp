@@ -10,7 +10,7 @@
 class ILibrary{
 public:
 	virtual int keyhook() = 0;
-	virtual void print(std::vector<SnakePart*> snakeParts, Food* food) = 0;
+	virtual void print(std::vector<SnakePart*> snakeParts, Food* food, std::string score) = 0;
 	virtual ~ILibrary(){};
 };
 

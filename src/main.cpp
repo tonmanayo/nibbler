@@ -35,13 +35,13 @@ int setLib(GameEngine **gameEngine, int libID){
 	return 1;
 }
 
+
 int launchGame(int winWidth, int winHeight, int libID){
 	GameEngine *game = new GameEngine(winWidth, winHeight, libID);
 	int direction;
 	if (!setLib(&game, libID))
 		return 0;
 	while (!game->getExit()){
-		usleep(50000);
 		if ((direction = game->getLibrary()->keyhook()) < 0)
 			break;
 		if (game->getSnake()->detectCollision(winWidth, winHeight)){
@@ -52,8 +52,11 @@ int launchGame(int winWidth, int winHeight, int libID){
             game->getSnake()->addPart();
             delete(game->getFood());
             game->setFood(new Food(game->getWinWidth(), game->getWinHeight(), game->getSnake()->getParts()));
+            game->addScore(300);
         };
-		game->getLibrary()->print(game->getSnake()->getParts(), game->getFood());
+		game->getLibrary()->print(game->getSnake()->getParts(), game->getFood(), std::to_string(game->getScore()));
+        game->addScore(1);
+        usleep(50000);
 	};
 	delete game;
 	return 1;
