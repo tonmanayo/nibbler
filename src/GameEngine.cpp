@@ -58,6 +58,10 @@ void GameEngine::setWinHeight(int winHeight) {
 	this->_winHeight = winHeight;
 }
 
+void GameEngine::addScore(int newScore) {
+    _score += newScore;
+}
+
 Snake* GameEngine::getSnake() {
     return this->_snake;
 }
@@ -74,11 +78,14 @@ bool GameEngine::getExit() {
 	return this->_exit;
 }
 
+int GameEngine::getScore() {
+	return this->_score;
+}
+
 bool GameEngine::checkEat() {
     SnakePart *tmpSnakePart = _snake->getParts()[0];
-
-    if (_food->getPosX() >= tmpSnakePart->getPosX() - (20/2) && _food->getPosX() <= tmpSnakePart->getPosX() + (20/2))
-        if (_food->getPosY() >= tmpSnakePart->getPosY() - (20/2) && _food->getPosY() <= tmpSnakePart->getPosY() + (20/2)) {
+    if (_food->getPosX() == tmpSnakePart->getPosX())
+        if (_food->getPosY() == tmpSnakePart->getPosY() + 20) {
             std::cout << "Snake ate food." << std::endl;
             return true;
         }

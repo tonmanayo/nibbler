@@ -14,6 +14,12 @@ if which -s brew > /dev/null ; then
         echo Installing SDL2
         brew install sdl2
     fi
+    if brew ls --versions sdl2_ttf  > /dev/null; then
+        echo SDL2_TTF already installed
+    else
+        echo Installing SDL2_TTF
+        brew install sdl2_ttf
+    fi
     if brew ls --versions allegro  > /dev/null; then
         echo Allegro already installed
     else

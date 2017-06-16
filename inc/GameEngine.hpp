@@ -22,6 +22,7 @@ public:
     Snake*      getSnake();
     Food*       getFood();
 	bool        getExit();
+	int         getScore();
 
 	void        setLibrary(ILibrary* library);
 	void        setLibHandler(void* libHandler);
@@ -30,6 +31,7 @@ public:
     void        setFood(Food* food);
 
     bool        checkEat();
+    void        addScore(int newScore);
 
 	~GameEngine();
 
