@@ -61,7 +61,7 @@ int SDL::keyhook() {
 	return ret;
 }
 
-void SDL::print(std::vector<SnakePart*> snakeParts) {
+void SDL::print(std::vector<SnakePart*> snakeParts, Food* food) {
 	SDL_SetRenderDrawColor(_windowRenderer, 0, 0, 0, 255);
 	SDL_RenderClear(_windowRenderer);
 	SDL_SetRenderDrawColor(_windowRenderer, 255, 255, 255, 255);
@@ -69,6 +69,8 @@ void SDL::print(std::vector<SnakePart*> snakeParts) {
 		SDL_Rect snakeRect= {(*i)->getPosX() - 20/2, (*i)->getPosY() + 20/2, 20, 20};
 		SDL_RenderFillRect(_windowRenderer, &snakeRect );
 	}
+	SDL_Rect foodRect = {food->getPosX() - 20/2, food->getPosY() - 20/2, 20, 20};
+	SDL_RenderFillRect(_windowRenderer, &foodRect );
 	SDL_RenderPresent(_windowRenderer);
 }
 

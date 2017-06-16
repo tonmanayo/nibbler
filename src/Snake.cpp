@@ -56,12 +56,26 @@ void Snake::update(int direction) {
 }
 
 int Snake::detectCollision(int winWidth, int winHeight) {
-	if (_parts[0]->getPosX() - (20/2) <= 0 || _parts[0]->getPosY() + (20/2) <= 0 ||
-			_parts[0]->getPosX() + (20/2) >= winWidth || _parts[0]->getPosY() + 20 >= winHeight){
+    int firstX = _parts[0]->getPosX();
+    int firstY = _parts[0]->getPosY();
+	if (firstX - (20/2) <= 0 || firstY + (20/2) <= 0 ||
+            firstX + (20/2) >= winWidth || firstY + 20 >= winHeight) {
 		std::cout << "collision detected" << std::endl;
 		return 1;
 	}
+    for (int i = 3; i < _length - 1; i++) {
+        if ((firstX == _parts[i]->getPosX()) && (firstY == _parts[i]->getPosY())) {
+            std::cout << "Fist part (" << _parts[0]->getPosX() << "; " << _parts[0]->getPosY() << "), Second Part (" << _parts[1]->getPosX() << "; " << _parts[1]->getPosY() << ")" << std::endl;
+            return 1;
+        };
+    }
 	return 0;
+}
+
+void Snake::addPart() {
+    _parts.push_back(new SnakePart(*_parts[_length - 1]));
+    _length++;
+    std::cout << "Snake grew. Length is now: " << _length << std::endl;
 }
 
 int Snake::getLength() {

@@ -2,6 +2,12 @@ echo Checking if Homebrew is installed
 if which -s brew > /dev/null ; then
     echo Homebrew already installed
     echo Installing dependencies
+    if brew ls --versions pkg-config  > /dev/null; then
+        echo pkg-config already installed
+    else
+        echo Installing pkg-config
+        brew install pkg-config
+    fi
     if brew ls --versions sdl2  > /dev/null; then
         echo SDL2 already installed
     else

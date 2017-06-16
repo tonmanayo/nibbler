@@ -9,6 +9,8 @@
 #include <iostream>
 #include <vector>
 #include "../../inc/ILibrary.hpp"
+#include "Food.hpp"
+
 
 class SDL : public ILibrary {
 public:
@@ -18,7 +20,7 @@ public:
 	virtual ~SDL();
 
 	int             keyhook();
-	void            print(std::vector<SnakePart*> snakeParts);
+	void            print(std::vector<SnakePart*> snakeParts, Food* food);
 
 private:
 	SDL();

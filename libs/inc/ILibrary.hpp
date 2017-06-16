@@ -5,11 +5,12 @@
 #ifndef NIBBLER_ILIBRARY_HPP
 #define NIBBLER_ILIBRARY_HPP
 #include "Snake.hpp"
+#include "Food.hpp"
 
 class ILibrary{
 public:
 	virtual int keyhook() = 0;
-	virtual void print(std::vector<SnakePart*> snakeParts) = 0;
+	virtual void print(std::vector<SnakePart*> snakeParts, Food* food) = 0;
 	virtual ~ILibrary(){};
 };
 

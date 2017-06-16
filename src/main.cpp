@@ -41,14 +41,19 @@ int launchGame(int winWidth, int winHeight, int libID){
 	if (!setLib(&game, libID))
 		return 0;
 	while (!game->getExit()){
-		usleep(33333);
+		usleep(50000);
 		if ((direction = game->getLibrary()->keyhook()) < 0)
 			break;
-		game->getSnake()->update(direction);
 		if (game->getSnake()->detectCollision(winWidth, winHeight)){
 			break;
 		};
-		game->getLibrary()->print(game->getSnake()->getParts());
+        game->getSnake()->update(direction);
+        if (game->checkEat()) {
+            game->getSnake()->addPart();
+            delete(game->getFood());
+            game->setFood(new Food(game->getWinWidth(), game->getWinHeight(), game->getSnake()->getParts()));
+        };
+		game->getLibrary()->print(game->getSnake()->getParts(), game->getFood());
 	};
 	delete game;
 	return 1;

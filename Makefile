@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/linuxbrew/.linuxbrew/Cellar/cmake/3.8.2/bin/cmake
+CMAKE_COMMAND = /nfs/zfs-student-6/users/kgani/.brew/Cellar/cmake/3.8.2/bin/cmake
 
 # The command to remove a file.
-RM = /home/linuxbrew/.linuxbrew/Cellar/cmake/3.8.2/bin/cmake -E remove -f
+RM = /nfs/zfs-student-6/users/kgani/.brew/Cellar/cmake/3.8.2/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tony/Projects/nibbler
+CMAKE_SOURCE_DIR = /nfs/zfs-student-6/users/kgani/projects/nibbler
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tony/Projects/nibbler
+CMAKE_BINARY_DIR = /nfs/zfs-student-6/users/kgani/projects/nibbler
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/tony/Projects/nibbler
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/linuxbrew/.linuxbrew/Cellar/cmake/3.8.2/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/nfs/zfs-student-6/users/kgani/.brew/Cellar/cmake/3.8.2/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/home/linuxbrew/.linuxbrew/Cellar/cmake/3.8.2/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/nfs/zfs-student-6/users/kgani/.brew/Cellar/cmake/3.8.2/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tony/Projects/nibbler/CMakeFiles /home/tony/Projects/nibbler/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/zfs-student-6/users/kgani/projects/nibbler/CMakeFiles /nfs/zfs-student-6/users/kgani/projects/nibbler/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tony/Projects/nibbler/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/zfs-student-6/users/kgani/projects/nibbler/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,6 +122,33 @@ nibbler: cmake_check_build_system
 nibbler/fast:
 	$(MAKE) -f CMakeFiles/nibbler.dir/build.make CMakeFiles/nibbler.dir/build
 .PHONY : nibbler/fast
+
+src/Food.o: src/Food.cpp.o
+
+.PHONY : src/Food.o
+
+# target to build an object file
+src/Food.cpp.o:
+	$(MAKE) -f CMakeFiles/nibbler.dir/build.make CMakeFiles/nibbler.dir/src/Food.cpp.o
+.PHONY : src/Food.cpp.o
+
+src/Food.i: src/Food.cpp.i
+
+.PHONY : src/Food.i
+
+# target to preprocess a source file
+src/Food.cpp.i:
+	$(MAKE) -f CMakeFiles/nibbler.dir/build.make CMakeFiles/nibbler.dir/src/Food.cpp.i
+.PHONY : src/Food.cpp.i
+
+src/Food.s: src/Food.cpp.s
+
+.PHONY : src/Food.s
+
+# target to generate assembly for a file
+src/Food.cpp.s:
+	$(MAKE) -f CMakeFiles/nibbler.dir/build.make CMakeFiles/nibbler.dir/src/Food.cpp.s
+.PHONY : src/Food.cpp.s
 
 src/GameEngine.o: src/GameEngine.cpp.o
 
@@ -240,6 +267,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... nibbler"
+	@echo "... src/Food.o"
+	@echo "... src/Food.i"
+	@echo "... src/Food.s"
 	@echo "... src/GameEngine.o"
 	@echo "... src/GameEngine.i"
 	@echo "... src/GameEngine.s"
