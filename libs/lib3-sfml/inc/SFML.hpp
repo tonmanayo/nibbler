@@ -22,7 +22,7 @@ public:
 	virtual ~SFML();
 
 	int keyhook();
-	void print(std::vector<SnakePart*> snakeParts);
+	void print(std::vector<SnakePart*> snakeParts, Food* food, std::string score);
 
 private:
 	SFML();

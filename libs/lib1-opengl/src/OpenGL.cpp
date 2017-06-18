@@ -17,16 +17,10 @@ OpenGL::OpenGL(int winWidth, int winHeight) : _winWidth(winWidth), _winHeight(wi
 		return ;
 	}
 
-//	_timer = al_create_timer(1.0 / _FPS);
-//	if(!_timer) {
-//		fprintf(stderr, "failed to create timer!\n");
-//		return ;
-//	}
 
 	_display = al_create_display(_winWidth, _winHeight);
 	if(!_display) {
 		fprintf(stderr, "failed to create display!\n");
-//		al_destroy_timer(_timer);
 		return ;
 	}
 
@@ -34,7 +28,6 @@ OpenGL::OpenGL(int winWidth, int winHeight) : _winWidth(winWidth), _winHeight(wi
 	if(!_box) {
 		fprintf(stderr, "failed to create box bitmap!\n");
 		al_destroy_display(_display);
-	//	al_destroy_timer(_timer);
 		return ;
 	}
 
@@ -47,21 +40,17 @@ OpenGL::OpenGL(int winWidth, int winHeight) : _winWidth(winWidth), _winHeight(wi
 		fprintf(stderr, "failed to create event_queue!\n");
 		al_destroy_bitmap(_box);
 		al_destroy_display(_display);
-	//	al_destroy_timer(_timer);
 		return ;
 	}
 
 	al_register_event_source(_event_queue, al_get_display_event_source(_display));
-//	al_register_event_source(_event_queue, al_get_timer_event_source(_timer));
 	al_register_event_source(_event_queue, al_get_keyboard_event_source());
 	al_clear_to_color(al_map_rgb(0,0,0));
 	al_flip_display();
-//	al_start_timer(_timer);
 }
 
 OpenGL::~OpenGL(){
 	al_destroy_bitmap(_box);
-//	al_destroy_timer(_timer);
 	al_destroy_display(_display);
 	al_destroy_event_queue(_event_queue);
 }
@@ -88,15 +77,14 @@ int OpenGL::keyhook(){
 	return 0;
 }
 
-void OpenGL::print(std::vector<SnakePart*> snakeParts){
-	//if(_redraw && al_is_event_queue_empty(_event_queue)) {
-	//	_redraw = false;
+void OpenGL::print(std::vector<SnakePart*> snakeParts, Food* food, std::string score){
 		al_clear_to_color(al_map_rgb(0,0,0));
 		for (auto i = snakeParts.begin(); i < snakeParts.end(); i++){
 			al_draw_bitmap(_box, (*i)->getPosX() - 20/2 , (*i)->getPosY() + - 20/2 , 0);
 		}
+		al_draw_bitmap(_box, food->getPosX() - 20/2, food->getPosY() - 20/2, 0);
+
 		al_flip_display();
-	//}
 }
 
 ILibrary *create(int winWidth, int winHeight){

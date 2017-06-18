@@ -42,25 +42,26 @@ int SFML::keyhook(){
 	return direction;
 }
 
-void SFML::print(std::vector<SnakePart*> snakeParts){
-
-
-
+void SFML::print(std::vector<SnakePart*> snakeParts, Food* food, std::string score){
 	_window->clear();
 
 	sf::RectangleShape _shape(sf::Vector2f(_blockSize, _blockSize));
+	sf::RectangleShape _food(sf::Vector2f(_blockSize, _blockSize));
 
-	_shape.setPosition(_winHeight / 2,_winWidth / 2);
+	_food.setPosition(food->getPosX() - 20/2, food->getPosY() - 20/2);
+	_food.setSize(sf::Vector2f(_blockSize, _blockSize));
+	_food.setFillColor(sf::Color::Red);
+
 	_shape.setSize(sf::Vector2f(_blockSize, _blockSize));
 	_shape.setFillColor(sf::Color::Green);
 
 	for (auto i = snakeParts.begin(); i < snakeParts.end(); i++){
-		//_shape.move((*i)->getPosX() - _blockSize/2,(*i)->getPosY() + - _blockSize/2);
-		_shape.setPosition((*i)->getPosX() , (*i)->getPosY() );
+		_shape.setPosition((*i)->getPosX() , (*i)->getPosY());
 		_window->draw(_shape);
 	}
+	_window->draw(_food);
 	_window->display();
-
+	std::cout << "hre\n";
 }
 
 ILibrary *create(int winWidth, int winHeight){

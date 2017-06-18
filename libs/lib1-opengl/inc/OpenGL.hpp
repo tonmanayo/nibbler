@@ -17,9 +17,8 @@ public:
 	OpenGL(OpenGL const &openGL);
 	OpenGL operator=(OpenGL const &rhs );
 	virtual ~OpenGL();
-
 	int keyhook();
-	void print(std::vector<SnakePart*> snakeParts);
+	void print(std::vector<SnakePart*> snakeParts, Food* food, std::string score);
 
 private:
 	OpenGL();
@@ -33,7 +32,6 @@ private:
 	ALLEGRO_TIMER       *_timer;
 	ALLEGRO_BITMAP      *_box;
 };
-
 
 #ifdef __cplusplus
 extern "C" {
