@@ -4,6 +4,8 @@
 
 #include "../inc/Food.hpp"
 
+
+
 Food::Food(int winWidth, int winHeight, std::vector<SnakePart*> parts): _winWidth(winWidth), _winHeight(winHeight) {
     std::cout << "Initialized food" << std::endl;
     genFood(parts);

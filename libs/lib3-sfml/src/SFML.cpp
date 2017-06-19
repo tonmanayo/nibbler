@@ -4,13 +4,12 @@
 
 #include "../inc/SFML.hpp"
 
-SFML::SFML(int winHeight, int winWidth) : _blockSize(20), _winHeight(winHeight), _winWidth(winWidth)
+SFML::SFML(int winHeight, int winWidth) : _window(new sf::RenderWindow), _blockSize(20), _winHeight(winHeight), _winWidth(winWidth)
 {
-	_window = RenderWindowPtr(new sf::RenderWindow);
-
 	_window->create(sf::VideoMode(winWidth, winHeight), "Nibbler!", sf::Style::Titlebar | sf::Style::Close);
 	_window->setFramerateLimit(60);
 	_window->setVerticalSyncEnabled(true);
+    _window->isOpen();
 	std::cout << "initialized SFML library at Width: " << _winWidth << " and Height: " << _winHeight << std::endl;
 }
 
@@ -21,23 +20,23 @@ SFML::~SFML(){
 int SFML::keyhook(){
 	int direction = 0;
 	sf::Event ev;
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-		direction = 4;
-	}
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-		direction = 2;
-	}
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-		direction = 1;
-	}
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-		direction = 3;
-	} else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
-		direction = -1;
-	}
-	if (ev.type == sf::Event::Closed){
-		_window->close();
-		direction = -1;
+	if (_window->pollEvent(ev)) {
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+			direction = 4;
+		} else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
+			direction = 2;
+		} else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+			direction = 1;
+		} else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
+			direction = 3;
+		} else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
+			direction = -1;
+		}
+		if (ev.type == sf::Event::Closed && direction != 0) {
+			std::cout << "hre\n";
+			_window->close();
+			direction = -1;
+		}
 	}
 	return direction;
 }

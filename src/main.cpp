@@ -9,7 +9,7 @@ int setLib(GameEngine **gameEngine, int libID){
 	std::cout << "Your Lib: " << libID << std::endl;
 	switch (libID){
 		case 1:
-			game->setLibHandler(dlopen("libs/lib1-opengl/libOpenGL.so", RTLD_NOW));
+			game->setLibHandler(dlopen("libs/lib1-opengl/libOpenGL.so", RTLD_GLOBAL));
 			break ;
 		case 2:
 			game->setLibHandler(dlopen("libs/lib2-sdl/libSDL.so", RTLD_NOW));

@@ -10,6 +10,8 @@
 #include <iostream>
 #include <vector>
 #include "../../inc/ILibrary.hpp"
+#include <dlfcn.h>
+
 
 class OpenGL : public ILibrary {
 public:
@@ -20,13 +22,13 @@ public:
 	int keyhook();
 	void print(std::vector<SnakePart*> snakeParts, Food* food, std::string score);
 
+
 private:
 	OpenGL();
 	const unsigned int _winWidth;
 	const unsigned int _winHeight;
 	const unsigned int _blockSize;
 	const unsigned int _FPS;
-    bool               _redraw;
 	ALLEGRO_DISPLAY     *_display;
 	ALLEGRO_EVENT_QUEUE *_event_queue;
 	ALLEGRO_TIMER       *_timer;

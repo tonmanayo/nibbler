@@ -7,6 +7,7 @@
 #include "Snake.hpp"
 #include "Food.hpp"
 
+
 class ILibrary{
 public:
 	virtual int keyhook() = 0;

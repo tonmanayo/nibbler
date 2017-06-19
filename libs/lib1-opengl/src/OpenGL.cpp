@@ -4,9 +4,10 @@
 #include "../inc/OpenGL.hpp"
 
 
+
 OpenGL::OpenGL(int winWidth, int winHeight) : _winWidth(winWidth), _winHeight(winHeight), _blockSize(20), _FPS(22) {
     std::cout << "initialized OpenGL library at Width: " << _winWidth << " and Height: " << _winHeight << std::endl;
-	_redraw = true;
+
 	if(!al_init()) {
 		fprintf(stderr, "failed to initialize allegro!\n");
 		return ;
@@ -16,7 +17,6 @@ OpenGL::OpenGL(int winWidth, int winHeight) : _winWidth(winWidth), _winHeight(wi
 		fprintf(stderr, "failed to initialize the keyboard!\n");
 		return ;
 	}
-
 
 	_display = al_create_display(_winWidth, _winHeight);
 	if(!_display) {
@@ -90,7 +90,6 @@ void OpenGL::print(std::vector<SnakePart*> snakeParts, Food* food, std::string s
 ILibrary *create(int winWidth, int winHeight){
 	return new OpenGL(winWidth, winHeight);
 }
-
 
 
 //g++ -Wall main.cpp -I/usr/include/allegro5 -L/usr/lib -lallegro -lallegro_image -lallegro_primitives

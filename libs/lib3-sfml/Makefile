@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/linuxbrew/.linuxbrew/Cellar/cmake/3.8.2/bin/cmake
+CMAKE_COMMAND = /nfs/zfs-student-6/users/tmack/.brew/Cellar/cmake/3.8.1/bin/cmake
 
 # The command to remove a file.
-RM = /home/linuxbrew/.linuxbrew/Cellar/cmake/3.8.2/bin/cmake -E remove -f
+RM = /nfs/zfs-student-6/users/tmack/.brew/Cellar/cmake/3.8.1/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tony/Projects/nibbler/libs/lib3-sfml
+CMAKE_SOURCE_DIR = /nfs/zfs-student-6/users/tmack/nibbler/libs/lib3-sfml
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tony/Projects/nibbler/libs/lib3-sfml
+CMAKE_BINARY_DIR = /nfs/zfs-student-6/users/tmack/nibbler/libs/lib3-sfml
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/tony/Projects/nibbler/libs/lib3-sfml
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/linuxbrew/.linuxbrew/Cellar/cmake/3.8.2/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/nfs/zfs-student-6/users/tmack/.brew/Cellar/cmake/3.8.1/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/home/linuxbrew/.linuxbrew/Cellar/cmake/3.8.2/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/nfs/zfs-student-6/users/tmack/.brew/Cellar/cmake/3.8.1/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tony/Projects/nibbler/libs/lib3-sfml/CMakeFiles /home/tony/Projects/nibbler/libs/lib3-sfml/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/zfs-student-6/users/tmack/nibbler/libs/lib3-sfml/CMakeFiles /nfs/zfs-student-6/users/tmack/nibbler/libs/lib3-sfml/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tony/Projects/nibbler/libs/lib3-sfml/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/zfs-student-6/users/tmack/nibbler/libs/lib3-sfml/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,140 +123,140 @@ SFML/fast:
 	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/build
 .PHONY : SFML/fast
 
-home/tony/Projects/nibbler/src/Food.o: home/tony/Projects/nibbler/src/Food.cpp.o
+nfs/zfs-student-6/users/tmack/nibbler/src/Food.o: nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.o
 
-.PHONY : home/tony/Projects/nibbler/src/Food.o
-
-# target to build an object file
-home/tony/Projects/nibbler/src/Food.cpp.o:
-	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/home/tony/Projects/nibbler/src/Food.cpp.o
-.PHONY : home/tony/Projects/nibbler/src/Food.cpp.o
-
-home/tony/Projects/nibbler/src/Food.i: home/tony/Projects/nibbler/src/Food.cpp.i
-
-.PHONY : home/tony/Projects/nibbler/src/Food.i
-
-# target to preprocess a source file
-home/tony/Projects/nibbler/src/Food.cpp.i:
-	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/home/tony/Projects/nibbler/src/Food.cpp.i
-.PHONY : home/tony/Projects/nibbler/src/Food.cpp.i
-
-home/tony/Projects/nibbler/src/Food.s: home/tony/Projects/nibbler/src/Food.cpp.s
-
-.PHONY : home/tony/Projects/nibbler/src/Food.s
-
-# target to generate assembly for a file
-home/tony/Projects/nibbler/src/Food.cpp.s:
-	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/home/tony/Projects/nibbler/src/Food.cpp.s
-.PHONY : home/tony/Projects/nibbler/src/Food.cpp.s
-
-home/tony/Projects/nibbler/src/GameEngine.o: home/tony/Projects/nibbler/src/GameEngine.cpp.o
-
-.PHONY : home/tony/Projects/nibbler/src/GameEngine.o
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Food.o
 
 # target to build an object file
-home/tony/Projects/nibbler/src/GameEngine.cpp.o:
-	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/home/tony/Projects/nibbler/src/GameEngine.cpp.o
-.PHONY : home/tony/Projects/nibbler/src/GameEngine.cpp.o
+nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.o:
+	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.o
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.o
 
-home/tony/Projects/nibbler/src/GameEngine.i: home/tony/Projects/nibbler/src/GameEngine.cpp.i
+nfs/zfs-student-6/users/tmack/nibbler/src/Food.i: nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.i
 
-.PHONY : home/tony/Projects/nibbler/src/GameEngine.i
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Food.i
 
 # target to preprocess a source file
-home/tony/Projects/nibbler/src/GameEngine.cpp.i:
-	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/home/tony/Projects/nibbler/src/GameEngine.cpp.i
-.PHONY : home/tony/Projects/nibbler/src/GameEngine.cpp.i
+nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.i:
+	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.i
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.i
 
-home/tony/Projects/nibbler/src/GameEngine.s: home/tony/Projects/nibbler/src/GameEngine.cpp.s
+nfs/zfs-student-6/users/tmack/nibbler/src/Food.s: nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.s
 
-.PHONY : home/tony/Projects/nibbler/src/GameEngine.s
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Food.s
 
 # target to generate assembly for a file
-home/tony/Projects/nibbler/src/GameEngine.cpp.s:
-	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/home/tony/Projects/nibbler/src/GameEngine.cpp.s
-.PHONY : home/tony/Projects/nibbler/src/GameEngine.cpp.s
+nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.s:
+	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.s
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.s
 
-home/tony/Projects/nibbler/src/Snake.o: home/tony/Projects/nibbler/src/Snake.cpp.o
+nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.o: nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.o
 
-.PHONY : home/tony/Projects/nibbler/src/Snake.o
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.o
 
 # target to build an object file
-home/tony/Projects/nibbler/src/Snake.cpp.o:
-	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/home/tony/Projects/nibbler/src/Snake.cpp.o
-.PHONY : home/tony/Projects/nibbler/src/Snake.cpp.o
+nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.o:
+	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.o
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.o
 
-home/tony/Projects/nibbler/src/Snake.i: home/tony/Projects/nibbler/src/Snake.cpp.i
+nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.i: nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.i
 
-.PHONY : home/tony/Projects/nibbler/src/Snake.i
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.i
 
 # target to preprocess a source file
-home/tony/Projects/nibbler/src/Snake.cpp.i:
-	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/home/tony/Projects/nibbler/src/Snake.cpp.i
-.PHONY : home/tony/Projects/nibbler/src/Snake.cpp.i
+nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.i:
+	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.i
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.i
 
-home/tony/Projects/nibbler/src/Snake.s: home/tony/Projects/nibbler/src/Snake.cpp.s
+nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.s: nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.s
 
-.PHONY : home/tony/Projects/nibbler/src/Snake.s
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.s
 
 # target to generate assembly for a file
-home/tony/Projects/nibbler/src/Snake.cpp.s:
-	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/home/tony/Projects/nibbler/src/Snake.cpp.s
-.PHONY : home/tony/Projects/nibbler/src/Snake.cpp.s
+nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.s:
+	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.s
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.s
 
-home/tony/Projects/nibbler/src/SnakePart.o: home/tony/Projects/nibbler/src/SnakePart.cpp.o
+nfs/zfs-student-6/users/tmack/nibbler/src/Snake.o: nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.o
 
-.PHONY : home/tony/Projects/nibbler/src/SnakePart.o
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Snake.o
 
 # target to build an object file
-home/tony/Projects/nibbler/src/SnakePart.cpp.o:
-	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/home/tony/Projects/nibbler/src/SnakePart.cpp.o
-.PHONY : home/tony/Projects/nibbler/src/SnakePart.cpp.o
+nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.o:
+	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.o
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.o
 
-home/tony/Projects/nibbler/src/SnakePart.i: home/tony/Projects/nibbler/src/SnakePart.cpp.i
+nfs/zfs-student-6/users/tmack/nibbler/src/Snake.i: nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.i
 
-.PHONY : home/tony/Projects/nibbler/src/SnakePart.i
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Snake.i
 
 # target to preprocess a source file
-home/tony/Projects/nibbler/src/SnakePart.cpp.i:
-	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/home/tony/Projects/nibbler/src/SnakePart.cpp.i
-.PHONY : home/tony/Projects/nibbler/src/SnakePart.cpp.i
+nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.i:
+	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.i
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.i
 
-home/tony/Projects/nibbler/src/SnakePart.s: home/tony/Projects/nibbler/src/SnakePart.cpp.s
+nfs/zfs-student-6/users/tmack/nibbler/src/Snake.s: nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.s
 
-.PHONY : home/tony/Projects/nibbler/src/SnakePart.s
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Snake.s
 
 # target to generate assembly for a file
-home/tony/Projects/nibbler/src/SnakePart.cpp.s:
-	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/home/tony/Projects/nibbler/src/SnakePart.cpp.s
-.PHONY : home/tony/Projects/nibbler/src/SnakePart.cpp.s
+nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.s:
+	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.s
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.s
 
-home/tony/Projects/nibbler/src/main.o: home/tony/Projects/nibbler/src/main.cpp.o
+nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.o: nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.o
 
-.PHONY : home/tony/Projects/nibbler/src/main.o
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.o
 
 # target to build an object file
-home/tony/Projects/nibbler/src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/home/tony/Projects/nibbler/src/main.cpp.o
-.PHONY : home/tony/Projects/nibbler/src/main.cpp.o
+nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.o:
+	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.o
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.o
 
-home/tony/Projects/nibbler/src/main.i: home/tony/Projects/nibbler/src/main.cpp.i
+nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.i: nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.i
 
-.PHONY : home/tony/Projects/nibbler/src/main.i
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.i
 
 # target to preprocess a source file
-home/tony/Projects/nibbler/src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/home/tony/Projects/nibbler/src/main.cpp.i
-.PHONY : home/tony/Projects/nibbler/src/main.cpp.i
+nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.i:
+	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.i
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.i
 
-home/tony/Projects/nibbler/src/main.s: home/tony/Projects/nibbler/src/main.cpp.s
+nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.s: nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.s
 
-.PHONY : home/tony/Projects/nibbler/src/main.s
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.s
 
 # target to generate assembly for a file
-home/tony/Projects/nibbler/src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/home/tony/Projects/nibbler/src/main.cpp.s
-.PHONY : home/tony/Projects/nibbler/src/main.cpp.s
+nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.s:
+	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.s
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.s
+
+nfs/zfs-student-6/users/tmack/nibbler/src/main.o: nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.o
+
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/main.o
+
+# target to build an object file
+nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.o
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.o
+
+nfs/zfs-student-6/users/tmack/nibbler/src/main.i: nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.i
+
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/main.i
+
+# target to preprocess a source file
+nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.i
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.i
+
+nfs/zfs-student-6/users/tmack/nibbler/src/main.s: nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.s
+
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/main.s
+
+# target to generate assembly for a file
+nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/SFML.dir/build.make CMakeFiles/SFML.dir/nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.s
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.s
 
 src/SFML.o: src/SFML.cpp.o
 
@@ -294,21 +294,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... SFML"
-	@echo "... home/tony/Projects/nibbler/src/Food.o"
-	@echo "... home/tony/Projects/nibbler/src/Food.i"
-	@echo "... home/tony/Projects/nibbler/src/Food.s"
-	@echo "... home/tony/Projects/nibbler/src/GameEngine.o"
-	@echo "... home/tony/Projects/nibbler/src/GameEngine.i"
-	@echo "... home/tony/Projects/nibbler/src/GameEngine.s"
-	@echo "... home/tony/Projects/nibbler/src/Snake.o"
-	@echo "... home/tony/Projects/nibbler/src/Snake.i"
-	@echo "... home/tony/Projects/nibbler/src/Snake.s"
-	@echo "... home/tony/Projects/nibbler/src/SnakePart.o"
-	@echo "... home/tony/Projects/nibbler/src/SnakePart.i"
-	@echo "... home/tony/Projects/nibbler/src/SnakePart.s"
-	@echo "... home/tony/Projects/nibbler/src/main.o"
-	@echo "... home/tony/Projects/nibbler/src/main.i"
-	@echo "... home/tony/Projects/nibbler/src/main.s"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/Food.o"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/Food.i"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/Food.s"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.o"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.i"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.s"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/Snake.o"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/Snake.i"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/Snake.s"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.o"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.i"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.s"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/main.o"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/main.i"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/main.s"
 	@echo "... src/SFML.o"
 	@echo "... src/SFML.i"
 	@echo "... src/SFML.s"

@@ -22,7 +22,7 @@ set(ALLEGRO5_ALL_LIBRARIES
         allegro allegro_image allegro_font
         allegro_primitives allegro_ttf allegro_audio
         allegro_dialog allegro_memfile allegro_acodec
-        allegro_color allegro_main allegro_physfs)
+        allegro_color allegro_physfs)
 
 foreach(ALLEGRO5_ONE_LIBRARY ${ALLEGRO5_ALL_LIBRARIES})
     #message("${ALLEGRO5_ONE_LIBRARY}")
@@ -35,6 +35,7 @@ endforeach(ALLEGRO5_ONE_LIBRARY)
 
 #MESSAGE("${Allegro5_LIBRARIES}")
 #message("${ALLEGRO5_LIBRARIES}")
+
 
 set(ALLEGRO_INCLUDE_DIR "${Allegro5_INCLUDE_DIR}")
 set(ALLEGRO_LIBRARIES "${Allegro5_LIBRARIES}")

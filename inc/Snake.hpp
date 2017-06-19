@@ -9,6 +9,7 @@
 #include "SnakePart.hpp"
 #include "iostream"
 
+
 class Snake {
 public:
 	Snake(int startX, int startY);
