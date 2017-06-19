@@ -6,3 +6,6 @@ CMakeCache.txt
 cmake_install.cmake
 CMakeFiles
 nibbler.cbp
+libSDL.so
+libOpenGL.so
+libSFML.so
