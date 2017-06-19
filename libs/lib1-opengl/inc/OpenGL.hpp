@@ -5,6 +5,7 @@
 #ifndef NIBBLER_OPENGL_HPP
 #define NIBBLER_OPENGL_HPP
 
+
 #include "allegro5/allegro.h"
 #include <cstdlib>
 #include <iostream>
