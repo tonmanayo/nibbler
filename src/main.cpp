@@ -4,6 +4,7 @@
 #include <thread>
 #include <unistd.h>
 
+
 int setLib(GameEngine **gameEngine, int libID){
 	GameEngine *game = *gameEngine;
 	std::cout << "Your Lib: " << libID << std::endl;
@@ -35,15 +36,55 @@ int setLib(GameEngine **gameEngine, int libID){
 	return 1;
 }
 
+void destroyLib(GameEngine **gameEngine){
+    GameEngine *game = *gameEngine;
+    game->destroyLib();
+    dlclose(game->getLibHandler());
+}
+
+void checkTimer(int score, int *timer){
+    if (score < 500)
+        *timer = 50000;
+    else {
+        *timer -= (*timer / 2000);
+    }
+}
+
+void changeLib(GameEngine *game, int value){
+    if (game->getLibId() != value) {
+        destroyLib(&game);
+        switch (value) {
+            case 5:
+                setLib(&game, 1);
+                game->setLibId(1);
+                break;
+            case 6:
+                setLib(&game, 2);
+                game->setLibId(2);
+                break;
+            case 7:
+                setLib(&game, 3);
+                game->setLibId(3);
+                break;
+            default:
+                break;
+        }
+    }
+}
+
 
 int launchGame(int winWidth, int winHeight, int libID){
+    int timer = 50000;
 	GameEngine *game = new GameEngine(winWidth, winHeight, libID);
 	int direction;
 	if (!setLib(&game, libID))
 		return 0;
 	while (!game->getExit()){
-		if ((direction = game->getLibrary()->keyhook()) < 0)
+        direction = game->getLibrary()->keyhook();
+		if (direction < 0)
 			break;
+        else if (direction == 5 || direction == 6 || direction == 7)
+            changeLib(game, direction);
 		if (game->getSnake()->detectCollision(winWidth, winHeight)){
 			break;
 		};
@@ -56,7 +97,8 @@ int launchGame(int winWidth, int winHeight, int libID){
         };
 		game->getLibrary()->print(game->getSnake()->getParts(), game->getFood(), std::to_string(game->getScore()));
         game->addScore(1);
-        usleep(50000);
+        checkTimer(game->getScore(), &timer);
+        usleep(timer);
 	};
 	delete game;
 	return 1;

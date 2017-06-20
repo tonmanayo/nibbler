@@ -23,12 +23,15 @@ public:
     Food*       getFood();
 	bool        getExit();
 	int         getScore();
+	int			getLibId();
 
 	void        setLibrary(ILibrary* library);
 	void        setLibHandler(void* libHandler);
 	void        setWinWidth(int winWidth);
 	void        setWinHeight(int winHeight);
     void        setFood(Food* food);
+	void		setLibId(int newLibId);
+    void        destroyLib();
 
     bool        checkEat();
     void        addScore(int newScore);

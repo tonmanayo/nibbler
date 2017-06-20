@@ -33,6 +33,10 @@ void GameEngine::setLibrary(ILibrary* library) {
 	this-> _library = library;
 }
 
+void GameEngine::destroyLib() {
+
+}
+
 
 void* GameEngine::getLibHandler(){
 	return this->_libHandler;
@@ -80,6 +84,14 @@ bool GameEngine::getExit() {
 
 int GameEngine::getScore() {
 	return this->_score;
+}
+
+int GameEngine::getLibId() {
+	return this->_libID;
+}
+
+void GameEngine::setLibId(int newLibId) {
+	this->_libID = newLibId;
 }
 
 bool GameEngine::checkEat() {

@@ -48,6 +48,15 @@ int SDL::keyhook() {
 	            case SDLK_LEFT:
 		            ret = 4;
 		            break;
+				case SDLK_1:
+					ret = 5;
+					break;
+				case SDLK_2:
+					ret = 6;
+					break;
+				case SDLK_3:
+					ret = 7;
+					break;
             }
             break;
         case SDL_QUIT:

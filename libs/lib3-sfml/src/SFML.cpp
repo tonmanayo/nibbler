@@ -6,7 +6,7 @@
 
 SFML::SFML(int winHeight, int winWidth) : _window(new sf::RenderWindow), _blockSize(20), _winHeight(winHeight), _winWidth(winWidth)
 {
-	_window->create(sf::VideoMode(winWidth, winHeight), "Nibbler!", sf::Style::Titlebar | sf::Style::Close);
+	_window->create(sf::VideoMode(winHeight, winWidth), "Nibbler!", sf::Style::Titlebar | sf::Style::Close);
 	_window->setFramerateLimit(60);
 	_window->setVerticalSyncEnabled(true);
     _window->isOpen();
@@ -33,7 +33,6 @@ int SFML::keyhook(){
 			direction = -1;
 		}
 		if (ev.type == sf::Event::Closed && direction != 0) {
-			std::cout << "hre\n";
 			_window->close();
 			direction = -1;
 		}
@@ -60,7 +59,6 @@ void SFML::print(std::vector<SnakePart*> snakeParts, Food* food, std::string sco
 	}
 	_window->draw(_food);
 	_window->display();
-	std::cout << "hre\n";
 }
 
 ILibrary *create(int winWidth, int winHeight){
