@@ -31,7 +31,13 @@ int SFMLv2::keyhook(){
 			direction = 3;
 		} else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
 			direction = -1;
-		}
+		}else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num1)) {
+            direction = 5;
+        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num2)) {
+            direction = 6;
+        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num3)) {
+            direction = 7;
+        }
 		if (ev.type == sf::Event::Closed && direction != 0) {
 			_window->close();
 			direction = -1;
@@ -41,24 +47,24 @@ int SFMLv2::keyhook(){
 }
 
 void SFMLv2::print(std::vector<SnakePart*> snakeParts, Food* food, std::string score){
-_window->clear();
 
-sf::RectangleShape _shape(sf::Vector2f(_blockSize, _blockSize));
-sf::RectangleShape _food(sf::Vector2f(_blockSize, _blockSize));
+	_window->clear();
+	sf::RectangleShape _shape(sf::Vector2f(_blockSize, _blockSize));
+	sf::RectangleShape _food(sf::Vector2f(_blockSize, _blockSize));
 
-_food.setPosition(food->getPosX() - 20/2, food->getPosY() - 20/2);
-_food.setSize(sf::Vector2f(_blockSize, _blockSize));
-_food.setFillColor(sf::Color::Red);
+	_food.setPosition(food->getPosX() - 20/2, food->getPosY() - 20/2);
+	_food.setSize(sf::Vector2f(_blockSize, _blockSize));
+	_food.setFillColor(sf::Color::Red);
 
-_shape.setSize(sf::Vector2f(_blockSize, _blockSize));
-_shape.setFillColor(sf::Color::Green);
+	_shape.setSize(sf::Vector2f(_blockSize, _blockSize));
+	_shape.setFillColor(sf::Color::Green);
 
-for (auto i = snakeParts.begin(); i < snakeParts.end(); i++){
-_shape.setPosition((*i)->getPosX() , (*i)->getPosY());
-_window->draw(_shape);
-}
-_window->draw(_food);
-_window->display();
+	for (auto i = snakeParts.begin(); i < snakeParts.end(); i++){
+		_shape.setPosition((*i)->getPosX() - 20/2 , (*i)->getPosY() + 20/2);
+		_window->draw(_shape);
+	}
+	_window->draw(_food);
+	_window->display();
 }
 
 ILibrary *create(int winWidth, int winHeight){
