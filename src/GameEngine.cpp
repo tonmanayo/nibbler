@@ -4,15 +4,17 @@
 
 #include "../inc/GameEngine.hpp"
 
-GameEngine::GameEngine(int winWidth, int winHeight, int libID) :
+GameEngine::GameEngine(int winWidth, int winHeight, int libID, int squareSize) :
+        _score(0),
 		_winWidth(winWidth),
 		_winHeight(winHeight),
-		_libID(libID),
+        _libID(libID),
+        _squareSize(squareSize),
         _exit(false)
 {
 	std::cout << "Game constructed" << std::endl;
-	_snake = new Snake(_winWidth / 2, _winHeight / 2);
-	_food = new Food(_winWidth, _winHeight, _snake->getParts());
+	_snake = new Snake(_winWidth / 2, _winHeight / 2, _squareSize);
+	_food = new Food(_winWidth, _winHeight, _snake->getParts(), _squareSize);
 }
 
 GameEngine::~GameEngine() {
@@ -92,6 +94,10 @@ int GameEngine::getLibId() {
 
 void GameEngine::setLibId(int newLibId) {
 	this->_libID = newLibId;
+}
+
+int GameEngine::getSquareSize() {
+    return this->_squareSize;
 }
 
 bool GameEngine::checkEat() {

@@ -8,10 +8,12 @@ int RIGHT = 2;
 int DOWN = 3;
 int LEFT = 4;
 
-Snake::Snake(int startX, int startY) : _length(4) {
+Snake::Snake(int startX, int startY, int squareSize) :
+		_length(4),
+		_squareSize(squareSize) {
 	std::cout << "Creating Snake." << std::endl;
 	for (int i = 0; i < 4; i++){
-		_parts.push_back(new SnakePart(startX, startY -= 20, UP));
+		_parts.push_back(new SnakePart(startX, startY -= _squareSize, UP));
 	}
 }
 
@@ -38,16 +40,16 @@ void Snake::update(int direction) {
 				_parts[i]->setDirection(direction);
 			switch(_parts[i]->getDirection()){
 				case 1:
-					_parts[i]->setPosY(_parts[i]->getPosY() - 20);
+					_parts[i]->setPosY(_parts[i]->getPosY() - _squareSize);
 					break;
 				case 2:
-					_parts[i]->setPosX(_parts[i]->getPosX() + 20);
+					_parts[i]->setPosX(_parts[i]->getPosX() + _squareSize);
 					break;
 				case 3:
-					_parts[i]->setPosY(_parts[i]->getPosY() + 20);
+					_parts[i]->setPosY(_parts[i]->getPosY() + _squareSize);
 					break;
 				case 4:
-					_parts[i]->setPosX(_parts[i]->getPosX() - 20);
+					_parts[i]->setPosX(_parts[i]->getPosX() - _squareSize);
 					break;
 				default: break;
 			}
@@ -58,8 +60,8 @@ void Snake::update(int direction) {
 int Snake::detectCollision(int winWidth, int winHeight) {
     int firstX = _parts[0]->getPosX();
     int firstY = _parts[0]->getPosY();
-	if (firstX - (20/2) <= 0 || firstY + (20/2) <= 0 ||
-            firstX + (20/2) >= winWidth || firstY + 20 >= winHeight) {
+	if (firstX - (_squareSize/2) <= 0 || firstY + (_squareSize/2) <= 0 ||
+            firstX + (_squareSize/2) >= winWidth || firstY + _squareSize >= winHeight) {
 		std::cout << "collision detected" << std::endl;
 		return 1;
 	}

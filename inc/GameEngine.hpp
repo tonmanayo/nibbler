@@ -12,7 +12,7 @@
 class GameEngine {
 public:
 	GameEngine(GameEngine const &src);
-	GameEngine(int winWidth, int winHeight, int libId);
+	GameEngine(int winWidth, int winHeight, int libId, int squareSize);
 	GameEngine &operator=(GameEngine const &src);
 
 	ILibrary*   getLibrary();
@@ -24,6 +24,7 @@ public:
 	bool        getExit();
 	int         getScore();
 	int			getLibId();
+    int         getSquareSize();
 
 	void        setLibrary(ILibrary* library);
 	void        setLibHandler(void* libHandler);
@@ -47,6 +48,7 @@ private:
 	int         _winWidth;
 	int         _winHeight;
 	int         _libID;
+    int         _squareSize;
 	void*       _libHandler;
 	bool        _libChange;
 	bool        _foodAvailable;

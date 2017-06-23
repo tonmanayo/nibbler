@@ -12,7 +12,7 @@
 
 class Snake {
 public:
-	Snake(int startX, int startY);
+	Snake(int startX, int startY, int squareSize);
 	Snake(Snake const &snake);
 	Snake &operator=(Snake const &src);
 
@@ -30,6 +30,7 @@ private:
 	Snake();
 	std::vector<SnakePart*>  	_parts;
 	int                     	_length;
+    int                         _squareSize;
 };
 
 
