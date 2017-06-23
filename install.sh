@@ -20,12 +20,6 @@ if which -s brew > /dev/null ; then
         echo Installing SDL2_TTF
         brew install sdl2_ttf
     fi
-    if brew ls --versions allegro  > /dev/null; then
-        echo Allegro already installed
-    else
-        echo Installing Allegro
-        brew install allegro
-    fi
     if brew ls --versions sfml > /dev/null; then
         echo SFML already installed
     else
@@ -33,13 +27,13 @@ if which -s brew > /dev/null ; then
         brew install sfml
     fi
     echo Making libraries
-    echo making OpenGL library
-    cd libs/lib1-opengl
+    echo making SFMLv2 library
+    cd libs/lib1-SFMLv2
     cmake .
     make
     cd ../../
-    if [ -f libs/lib1-opengl/libOpenGL.so ]; then
-        mv libs/lib1-opengl/libOpenGL.so .
+    if [ -f libs/lib1-SFMLv2/libSFMLv2.so ]; then
+        mv libs/lib1-SFMLv2/libSFMLv2.so .
     fi
     echo making SDL library
     cd libs/lib2-sdl

@@ -10,7 +10,7 @@ int setLib(GameEngine **gameEngine, int libID){
 	std::cout << "Your Lib: " << libID << std::endl;
 	switch (libID){
 		case 1:
-			game->setLibHandler(dlopen("libOpenGL.so", RTLD_GLOBAL));
+			game->setLibHandler(dlopen("libSFMLv2.so", RTLD_GLOBAL));
 			break ;
 		case 2:
 			game->setLibHandler(dlopen("libSDL.so", RTLD_NOW));
@@ -125,7 +125,7 @@ int main(int argc, char **argv){
 			while(1) {
 				libID = 0;
 				std::cout << "Please select the graphics library you'd like to use:" << std::endl;
-				std::cout << "\t1. OpenGL" << std::endl;
+				std::cout << "\t1. SFMLv2" << std::endl;
 				std::cout << "\t2. SDL" << std::endl;
 				std::cout << "\t3. SFML" << std::endl << std::endl;
 				std::cout << "Your choice: ";

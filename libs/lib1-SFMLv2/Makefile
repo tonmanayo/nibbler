@@ -48,10 +48,10 @@ RM = /nfs/zfs-student-6/users/tmack/.brew/Cellar/cmake/3.8.1/bin/cmake -E remove
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /nfs/zfs-student-6/users/tmack/nibbler/libs/lib2-sdl
+CMAKE_SOURCE_DIR = /nfs/zfs-student-6/users/tmack/nibbler/libs/lib1-SFMLv2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /nfs/zfs-student-6/users/tmack/nibbler/libs/lib2-sdl
+CMAKE_BINARY_DIR = /nfs/zfs-student-6/users/tmack/nibbler/libs/lib1-SFMLv2
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/zfs-student-6/users/tmack/nibbler/libs/lib2-sdl/CMakeFiles /nfs/zfs-student-6/users/tmack/nibbler/libs/lib2-sdl/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/zfs-student-6/users/tmack/nibbler/libs/lib1-SFMLv2/CMakeFiles /nfs/zfs-student-6/users/tmack/nibbler/libs/lib1-SFMLv2/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/zfs-student-6/users/tmack/nibbler/libs/lib2-sdl/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/zfs-student-6/users/tmack/nibbler/libs/lib1-SFMLv2/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named SDL
+# Target rules for targets named SFMLv2
 
 # Build rule for target.
-SDL: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 SDL
-.PHONY : SDL
+SFMLv2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 SFMLv2
+.PHONY : SFMLv2
 
 # fast build rule for target.
-SDL/fast:
-	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/build
-.PHONY : SDL/fast
+SFMLv2/fast:
+	$(MAKE) -f CMakeFiles/SFMLv2.dir/build.make CMakeFiles/SFMLv2.dir/build
+.PHONY : SFMLv2/fast
 
 nfs/zfs-student-6/users/tmack/nibbler/src/Food.o: nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.o
 
@@ -129,7 +129,7 @@ nfs/zfs-student-6/users/tmack/nibbler/src/Food.o: nfs/zfs-student-6/users/tmack/
 
 # target to build an object file
 nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.o:
-	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.o
+	$(MAKE) -f CMakeFiles/SFMLv2.dir/build.make CMakeFiles/SFMLv2.dir/nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.o
 .PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.o
 
 nfs/zfs-student-6/users/tmack/nibbler/src/Food.i: nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.i
@@ -138,7 +138,7 @@ nfs/zfs-student-6/users/tmack/nibbler/src/Food.i: nfs/zfs-student-6/users/tmack/
 
 # target to preprocess a source file
 nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.i:
-	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.i
+	$(MAKE) -f CMakeFiles/SFMLv2.dir/build.make CMakeFiles/SFMLv2.dir/nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.i
 .PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.i
 
 nfs/zfs-student-6/users/tmack/nibbler/src/Food.s: nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.s
@@ -147,7 +147,7 @@ nfs/zfs-student-6/users/tmack/nibbler/src/Food.s: nfs/zfs-student-6/users/tmack/
 
 # target to generate assembly for a file
 nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.s:
-	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.s
+	$(MAKE) -f CMakeFiles/SFMLv2.dir/build.make CMakeFiles/SFMLv2.dir/nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.s
 .PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.s
 
 nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.o: nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.o
@@ -156,7 +156,7 @@ nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.o: nfs/zfs-student-6/users/
 
 # target to build an object file
 nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.o:
-	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.o
+	$(MAKE) -f CMakeFiles/SFMLv2.dir/build.make CMakeFiles/SFMLv2.dir/nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.o
 .PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.o
 
 nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.i: nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.i
@@ -165,7 +165,7 @@ nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.i: nfs/zfs-student-6/users/
 
 # target to preprocess a source file
 nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.i:
-	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.i
+	$(MAKE) -f CMakeFiles/SFMLv2.dir/build.make CMakeFiles/SFMLv2.dir/nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.i
 .PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.i
 
 nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.s: nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.s
@@ -174,7 +174,7 @@ nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.s: nfs/zfs-student-6/users/
 
 # target to generate assembly for a file
 nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.s:
-	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.s
+	$(MAKE) -f CMakeFiles/SFMLv2.dir/build.make CMakeFiles/SFMLv2.dir/nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.s
 .PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.cpp.s
 
 nfs/zfs-student-6/users/tmack/nibbler/src/Snake.o: nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.o
@@ -183,7 +183,7 @@ nfs/zfs-student-6/users/tmack/nibbler/src/Snake.o: nfs/zfs-student-6/users/tmack
 
 # target to build an object file
 nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.o:
-	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.o
+	$(MAKE) -f CMakeFiles/SFMLv2.dir/build.make CMakeFiles/SFMLv2.dir/nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.o
 .PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.o
 
 nfs/zfs-student-6/users/tmack/nibbler/src/Snake.i: nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.i
@@ -192,7 +192,7 @@ nfs/zfs-student-6/users/tmack/nibbler/src/Snake.i: nfs/zfs-student-6/users/tmack
 
 # target to preprocess a source file
 nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.i:
-	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.i
+	$(MAKE) -f CMakeFiles/SFMLv2.dir/build.make CMakeFiles/SFMLv2.dir/nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.i
 .PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.i
 
 nfs/zfs-student-6/users/tmack/nibbler/src/Snake.s: nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.s
@@ -201,7 +201,7 @@ nfs/zfs-student-6/users/tmack/nibbler/src/Snake.s: nfs/zfs-student-6/users/tmack
 
 # target to generate assembly for a file
 nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.s:
-	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.s
+	$(MAKE) -f CMakeFiles/SFMLv2.dir/build.make CMakeFiles/SFMLv2.dir/nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.s
 .PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Snake.cpp.s
 
 nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.o: nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.o
@@ -210,7 +210,7 @@ nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.o: nfs/zfs-student-6/users/t
 
 # target to build an object file
 nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.o:
-	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.o
+	$(MAKE) -f CMakeFiles/SFMLv2.dir/build.make CMakeFiles/SFMLv2.dir/nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.o
 .PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.o
 
 nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.i: nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.i
@@ -219,7 +219,7 @@ nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.i: nfs/zfs-student-6/users/t
 
 # target to preprocess a source file
 nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.i:
-	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.i
+	$(MAKE) -f CMakeFiles/SFMLv2.dir/build.make CMakeFiles/SFMLv2.dir/nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.i
 .PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.i
 
 nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.s: nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.s
@@ -228,7 +228,7 @@ nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.s: nfs/zfs-student-6/users/t
 
 # target to generate assembly for a file
 nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.s:
-	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.s
+	$(MAKE) -f CMakeFiles/SFMLv2.dir/build.make CMakeFiles/SFMLv2.dir/nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.s
 .PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.cpp.s
 
 nfs/zfs-student-6/users/tmack/nibbler/src/main.o: nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.o
@@ -237,7 +237,7 @@ nfs/zfs-student-6/users/tmack/nibbler/src/main.o: nfs/zfs-student-6/users/tmack/
 
 # target to build an object file
 nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/SFMLv2.dir/build.make CMakeFiles/SFMLv2.dir/nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.o
 .PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.o
 
 nfs/zfs-student-6/users/tmack/nibbler/src/main.i: nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.i
@@ -246,7 +246,7 @@ nfs/zfs-student-6/users/tmack/nibbler/src/main.i: nfs/zfs-student-6/users/tmack/
 
 # target to preprocess a source file
 nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/SFMLv2.dir/build.make CMakeFiles/SFMLv2.dir/nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.i
 .PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.i
 
 nfs/zfs-student-6/users/tmack/nibbler/src/main.s: nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.s
@@ -255,35 +255,35 @@ nfs/zfs-student-6/users/tmack/nibbler/src/main.s: nfs/zfs-student-6/users/tmack/
 
 # target to generate assembly for a file
 nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/SFMLv2.dir/build.make CMakeFiles/SFMLv2.dir/nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.s
 .PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/main.cpp.s
 
-src/SDL.o: src/SDL.cpp.o
+src/SFMLv2.o: src/SFMLv2.cpp.o
 
-.PHONY : src/SDL.o
+.PHONY : src/SFMLv2.o
 
 # target to build an object file
-src/SDL.cpp.o:
-	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/src/SDL.cpp.o
-.PHONY : src/SDL.cpp.o
+src/SFMLv2.cpp.o:
+	$(MAKE) -f CMakeFiles/SFMLv2.dir/build.make CMakeFiles/SFMLv2.dir/src/SFMLv2.cpp.o
+.PHONY : src/SFMLv2.cpp.o
 
-src/SDL.i: src/SDL.cpp.i
+src/SFMLv2.i: src/SFMLv2.cpp.i
 
-.PHONY : src/SDL.i
+.PHONY : src/SFMLv2.i
 
 # target to preprocess a source file
-src/SDL.cpp.i:
-	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/src/SDL.cpp.i
-.PHONY : src/SDL.cpp.i
+src/SFMLv2.cpp.i:
+	$(MAKE) -f CMakeFiles/SFMLv2.dir/build.make CMakeFiles/SFMLv2.dir/src/SFMLv2.cpp.i
+.PHONY : src/SFMLv2.cpp.i
 
-src/SDL.s: src/SDL.cpp.s
+src/SFMLv2.s: src/SFMLv2.cpp.s
 
-.PHONY : src/SDL.s
+.PHONY : src/SFMLv2.s
 
 # target to generate assembly for a file
-src/SDL.cpp.s:
-	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/src/SDL.cpp.s
-.PHONY : src/SDL.cpp.s
+src/SFMLv2.cpp.s:
+	$(MAKE) -f CMakeFiles/SFMLv2.dir/build.make CMakeFiles/SFMLv2.dir/src/SFMLv2.cpp.s
+.PHONY : src/SFMLv2.cpp.s
 
 # Help Target
 help:
@@ -293,7 +293,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... SDL"
+	@echo "... SFMLv2"
 	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/Food.o"
 	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/Food.i"
 	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/Food.s"
@@ -309,9 +309,9 @@ help:
 	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/main.o"
 	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/main.i"
 	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/main.s"
-	@echo "... src/SDL.o"
-	@echo "... src/SDL.i"
-	@echo "... src/SDL.s"
+	@echo "... src/SFMLv2.o"
+	@echo "... src/SFMLv2.i"
+	@echo "... src/SFMLv2.s"
 .PHONY : help
 
 

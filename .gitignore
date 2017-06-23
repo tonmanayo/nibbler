@@ -7,5 +7,5 @@ cmake_install.cmake
 CMakeFiles
 nibbler.cbp
 libSDL.so
-libOpenGL.so
+libSFMLv2.so
 libSFML.so
