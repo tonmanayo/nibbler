@@ -6,6 +6,7 @@
 #define NIBBLER_SFML_HPP
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include <iostream>
 #include <cstdlib>
 #include <vector>
@@ -31,7 +32,7 @@ public:
 
 
         int keyhook();
-	void print(std::vector<SnakePart*> snakeParts, Food* food, std::string score);
+	void print(std::vector<SnakePart*> snakeParts, Food* food, Bonus* bonus, std::string score);
 
 private:
 	SFML();
@@ -40,8 +41,12 @@ private:
 	const unsigned int _blockSize;
 	RenderWindowPtr _window;
 	t_spriteStr _snakeHead;
+    t_spriteStr _popcorn;
+
     int _direction;
     int _tl;
+    sf::SoundBuffer _sbuffer;
+    sf::Sound _sound;
 };
 
 

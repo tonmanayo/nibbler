@@ -95,7 +95,13 @@ int launchGame(int winWidth, int winHeight, int libID){
             game->setFood(new Food(game->getWinWidth(), game->getWinHeight(), game->getSnake()->getParts()));
             game->addScore(300);
         };
-		game->getLibrary()->print(game->getSnake()->getParts(), game->getFood(), std::to_string(game->getScore()));
+		if (game->checkBonus()) {
+			game->getSnake()->addPart();
+			delete(game->getBonus());
+			game->setBonus(new Bonus(game->getWinWidth(), game->getWinHeight(), game->getSnake()->getParts()));
+			game->addScore(900);
+		};
+		game->getLibrary()->print(game->getSnake()->getParts(), game->getFood(), game->getBonus(), std::to_string(game->getScore()));
         game->addScore(1);
         checkTimer(game->getScore(), &timer);
         usleep(timer);

@@ -69,7 +69,7 @@ int SDL::keyhook() {
 	return ret;
 }
 
-void SDL::print(std::vector<SnakePart*> snakeParts, Food* food, std::string score) {
+void SDL::print(std::vector<SnakePart*> snakeParts, Food* food, Bonus* bonus, std::string score) {
 	SDL_Rect textRect;
 	SDL_Color textColor = {255,255,255};
     SDL_SetRenderDrawColor(_windowRenderer, 0, 0, 0, 255);

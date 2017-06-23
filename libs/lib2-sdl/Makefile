@@ -123,6 +123,33 @@ SDL/fast:
 	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/build
 .PHONY : SDL/fast
 
+nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.o: nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.cpp.o
+
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.o
+
+# target to build an object file
+nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.cpp.o:
+	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.cpp.o
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.cpp.o
+
+nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.i: nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.cpp.i
+
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.i
+
+# target to preprocess a source file
+nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.cpp.i:
+	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.cpp.i
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.cpp.i
+
+nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.s: nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.cpp.s
+
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.s
+
+# target to generate assembly for a file
+nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.cpp.s:
+	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.cpp.s
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.cpp.s
+
 nfs/zfs-student-6/users/tmack/nibbler/src/Food.o: nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.o
 
 .PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Food.o
@@ -294,6 +321,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... SDL"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.o"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.i"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.s"
 	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/Food.o"
 	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/Food.i"
 	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/Food.s"

@@ -7,6 +7,8 @@
 
 #include "Snake.hpp"
 #include "Food.hpp"
+#include "Bonus.hpp"
+
 #include "../libs/inc/ILibrary.hpp"
 
 class GameEngine {
@@ -21,6 +23,7 @@ public:
 	int         getWinHeight();
     Snake*      getSnake();
     Food*       getFood();
+	Bonus*      getBonus();
 	bool        getExit();
 	int         getScore();
 	int			getLibId();
@@ -30,11 +33,13 @@ public:
 	void        setWinWidth(int winWidth);
 	void        setWinHeight(int winHeight);
     void        setFood(Food* food);
+	void        setBonus(Bonus* bonus);
 	void		setLibId(int newLibId);
     void        destroyLib();
 
     bool        checkEat();
-    void        addScore(int newScore);
+	bool        checkBonus();
+	void        addScore(int newScore);
 
 	~GameEngine();
 
@@ -42,6 +47,7 @@ private:
 	GameEngine();
 	Snake*      _snake;
     Food*       _food;
+	Bonus*      _bonus;
 	ILibrary*   _library;
     int         _score;
 	int         _winWidth;
@@ -50,6 +56,7 @@ private:
 	void*       _libHandler;
 	bool        _libChange;
 	bool        _foodAvailable;
+	bool        _bonusAvailable;
 	bool        _gameOver;
 	bool        _exit;
 };

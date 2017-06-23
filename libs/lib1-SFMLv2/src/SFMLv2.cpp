@@ -46,7 +46,7 @@ int SFMLv2::keyhook(){
 	return direction;
 }
 
-void SFMLv2::print(std::vector<SnakePart*> snakeParts, Food* food, std::string score){
+void SFMLv2::print(std::vector<SnakePart*> snakeParts, Food* food, Bonus* bonus, std::string score){
 
 	_window->clear();
     sf::CircleShape _shape;

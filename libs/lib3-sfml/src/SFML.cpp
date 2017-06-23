@@ -12,11 +12,17 @@ SFML::SFML(int winHeight, int winWidth) : _window(new sf::RenderWindow), _blockS
     _window->isOpen();
     _direction = 0;
     _tl = 0;
+    if (!_sbuffer.loadFromFile("sounds/fart.wav")) {
+        std::cout << "cant load sound\n";
+        return;
+    }
+    _sound.setBuffer(_sbuffer);
 	std::cout << "initialized SFML library at Width: " << _winWidth << " and Height: " << _winHeight << std::endl;
 }
 
+
 SFML::~SFML(){
-	std::cout << "Dead SFML\n";
+    std::cout << "Dead SFML\n";
 }
 
 int SFML::keyhook(){
@@ -24,6 +30,7 @@ int SFML::keyhook(){
 	sf::Event ev;
 	if (_window->pollEvent(ev)) {
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+            _sound.play();
             _direction = 4;
 		} else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
             _direction = 2;
@@ -58,31 +65,40 @@ void SFML::mvDirec() {
         _tl = 0;
     }
 }
-void SFML::print(std::vector<SnakePart*> snakeParts, Food* food, std::string score){
+void SFML::print(std::vector<SnakePart*> snakeParts, Food* food, Bonus* bonus, std::string score){
 	_window->clear();
 //score
 	sf::Font font;
 	if (!font.loadFromFile("/Library/Fonts/Arial.ttf")) {
 		std::cout << "Can't laod font\n";
 	}
-
     sf::Text iscore;
 	iscore.setFont(font);
     iscore.setString(score);
     iscore.setFillColor(sf::Color::White);
 //shapes
+    // head sprite
     _snakeHead.image.loadFromFile("sprites/head-snake.png");
     _snakeHead.image.createMaskFromColor(sf::Color::White);
     _snakeHead.texture.loadFromImage(_snakeHead.image, sf::IntRect(0, 0, 32, 32));
     _snakeHead.sprite.setTexture(_snakeHead.texture);
     _snakeHead.sprite.setOrigin(16, 16);
+
     mvDirec();
     _snakeHead.sprite.setRotation(_tl);
+//popcorn sprite
+
+    _popcorn.image.loadFromFile("sprites/popcorn1.png");
+    _popcorn.image.createMaskFromColor(sf::Color::White);
+    _popcorn.texture.loadFromImage(_popcorn.image, sf::IntRect(0, 0, 32, 32));
+    _popcorn.sprite.setTexture(_popcorn.texture);
+    _popcorn.sprite.setOrigin(16, 16);
+    _popcorn.sprite.setPosition(food->getPosX(), food->getPosY() - 10);
 
     sf::RectangleShape _shape(sf::Vector2f(_blockSize, _blockSize));
 	sf::RectangleShape _food(sf::Vector2f(_blockSize, _blockSize));
 
-	_food.setPosition(food->getPosX() - 20/2, food->getPosY() - 20/2);
+	_food.setPosition(bonus->getPosX() - 20/2, bonus->getPosY() - 20/2);
 	_food.setSize(sf::Vector2f(_blockSize, _blockSize));
 	_food.setFillColor(sf::Color::Red);
 
@@ -95,7 +111,8 @@ void SFML::print(std::vector<SnakePart*> snakeParts, Food* food, std::string sco
 	}
     _snakeHead.sprite.setPosition(snakeParts[0]->getPosX(), snakeParts[0]->getPosY() + 20);
     _window->draw(_snakeHead.sprite);
-	_window->draw(_food);
+	_window->draw(_popcorn.sprite);
+    _window->draw(_food);
     _window->draw(iscore);
 	_window->display();
 }

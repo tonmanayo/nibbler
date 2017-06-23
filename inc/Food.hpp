@@ -20,7 +20,7 @@ public:
 
     int getPosX();
     int getPosY();
-;private:
+private:
     Food();
     int _winWidth;
     int _winHeight;
