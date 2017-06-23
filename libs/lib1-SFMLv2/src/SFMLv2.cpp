@@ -49,15 +49,17 @@ int SFMLv2::keyhook(){
 void SFMLv2::print(std::vector<SnakePart*> snakeParts, Food* food, std::string score){
 
 	_window->clear();
-	sf::RectangleShape _shape(sf::Vector2f(_blockSize, _blockSize));
+    sf::CircleShape _shape;
+
+    _shape.setRadius(_blockSize / 2);
+    _shape.setOutlineColor(sf::Color::Red);
+    _shape.setOutlineThickness(3);
 	sf::RectangleShape _food(sf::Vector2f(_blockSize, _blockSize));
 
 	_food.setPosition(food->getPosX() - 20/2, food->getPosY() - 20/2);
 	_food.setSize(sf::Vector2f(_blockSize, _blockSize));
 	_food.setFillColor(sf::Color::Red);
-
-	_shape.setSize(sf::Vector2f(_blockSize, _blockSize));
-	_shape.setFillColor(sf::Color::Green);
+	_shape.setFillColor(sf::Color::Blue);
 
 	for (auto i = snakeParts.begin(); i < snakeParts.end(); i++){
 		_shape.setPosition((*i)->getPosX() - 20/2 , (*i)->getPosY() + 20/2);

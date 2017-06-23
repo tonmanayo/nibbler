@@ -14,14 +14,23 @@
 
 typedef std::shared_ptr<sf::RenderWindow> RenderWindowPtr;
 
+typedef struct		s_spriteStr
+{
+	sf::Texture	texture;
+	sf::Image	image;
+	sf::Sprite	sprite;
+}					t_spriteStr;
+
 class SFML : public ILibrary {
 public:
 	SFML(int winWidth, int winHeight);
 	SFML(SFML const &rhs);
 	SFML operator=(SFML const &rhs );
 	virtual ~SFML();
+    void mvDirec();
 
-	int keyhook();
+
+        int keyhook();
 	void print(std::vector<SnakePart*> snakeParts, Food* food, std::string score);
 
 private:
@@ -30,6 +39,9 @@ private:
 	const unsigned int _winHeight;
 	const unsigned int _blockSize;
 	RenderWindowPtr _window;
+	t_spriteStr _snakeHead;
+    int _direction;
+    int _tl;
 };
 
 
