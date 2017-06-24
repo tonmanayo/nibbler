@@ -94,6 +94,7 @@ int launchGame(int winWidth, int winHeight, int libID){
 		if (direction < 0)
 			break;
         else if (direction == 5 || direction == 6 || direction == 7) {
+            dlclose(game->getLibHandler());
             changeLib(game, direction);
             previousTimer = timer;
             timer = 500000000;
@@ -127,9 +128,10 @@ int launchGame(int winWidth, int winHeight, int libID){
             game->getLibrary()->print(game->getSnake()->getParts(), game->getFood(), game->getBonus(),
                                       std::to_string(game->getScore()));
             game->addScore(1);
+        }
             checkTimer(game->getScore(), &timer);
             usleep(timer);
-        }
+
 
 	}
 	delete game;
