@@ -4,7 +4,11 @@
 
 #include "../inc/Food.hpp"
 
-Food::Food(int winWidth, int winHeight, std::vector<SnakePart*> parts): _winWidth(winWidth), _winHeight(winHeight) {
+Food::Food(int winWidth, int winHeight, std::vector<SnakePart*> parts, int squareSize):
+        _winWidth(winWidth),
+        _winHeight(winHeight),
+        _squareSize(squareSize)
+{
     std::cout << "Initialized food" << std::endl;
     genFood(parts);
 }
@@ -12,14 +16,14 @@ Food::Food(int winWidth, int winHeight, std::vector<SnakePart*> parts): _winWidt
 
 void Food::genFood(std::vector<SnakePart *> parts) {
     bool onSnake = false;
-    int minX = 20;
-    int minY = 20;
-    int maxX = _winWidth - 20;
-    int maxY = _winHeight - 20;
+    int minX = _squareSize;
+    int minY = _squareSize;
+    int maxX = _winWidth - _squareSize;
+    int maxY = _winHeight - _squareSize;
 
     std::srand(clock());
-    _posX = (std::rand() % (maxX-minX + 1) + minX) /20 * 20;
-    _posY = (std::rand() % (maxY-minY + 1) + minY) /20 * 20;
+    _posX = (std::rand() % (maxX-minX + 1) + minX) /_squareSize * _squareSize;
+    _posY = (std::rand() % (maxY-minY + 1) + minY) /_squareSize * _squareSize;
     for (auto it = parts.begin(); it < parts.end(); it++){
         if (_posX == (*it)->getPosX() && _posY == (*it)->getPosY())
             onSnake = true;

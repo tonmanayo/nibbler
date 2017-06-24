@@ -10,7 +10,7 @@
 
 class Food {
 public:
-    Food(int winWidth, int winHeight, std::vector<SnakePart*> parts);
+    Food(int winWidth, int winHeight, std::vector<SnakePart*> parts, int squareSpace);
     Food(Food const &food);
     Food &operator=(Food const &src);
     virtual ~Food();
@@ -26,6 +26,7 @@ private:
     int _winHeight;
     int _posX;
     int _posY;
+    int _squareSize;
 };
 
 
