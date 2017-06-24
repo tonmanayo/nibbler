@@ -10,7 +10,8 @@ GameEngine::GameEngine(int winWidth, int winHeight, int libID, int squareSize) :
 		_winHeight(winHeight),
         _libID(libID),
         _squareSize(squareSize),
-        _exit(false)
+        _exit(false),
+		_res(false)
 {
 	std::cout << "Game constructed" << std::endl;
 	_snake = new Snake(_winWidth / 2, _winHeight / 2, _squareSize);
@@ -110,6 +111,14 @@ int GameEngine::getSquareSize() {
     return this->_squareSize;
 }
 
+bool GameEngine::getRes() {
+    return this->_res;
+}
+
+void GameEngine::setRes(bool res) {
+    this->_res = res;
+}
+
 bool GameEngine::checkEat() {
     SnakePart *tmpSnakePart = _snake->getParts()[0];
     if (_food->getPosX() == tmpSnakePart->getPosX())
@@ -125,7 +134,7 @@ bool GameEngine::checkBonus(){
 	if (_bonus->getPosX() == tmpSnakePart->getPosX())
 		if (_bonus->getPosY() == tmpSnakePart->getPosY() + 20) {
 			std::cout << "Snake ate bonus." << std::endl;
-			return true;
+            return true;
 		}
-	return false;
+    return false;
 }

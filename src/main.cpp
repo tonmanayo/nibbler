@@ -78,6 +78,7 @@ void changeLib(GameEngine *game, int value){
 
 int launchGame(int winWidth, int winHeight, int libID){
     int timer = 50000;
+    time_t seconds;
     int previousTimer = timer;
     int squareSize = 20;
     bool paused = false;
@@ -86,6 +87,9 @@ int launchGame(int winWidth, int winHeight, int libID){
 	if (!setLib(&game, libID))
 		return 0;
 	while (!game->getExit()){
+
+        seconds = time (NULL);
+
         direction = game->getLibrary()->keyhook();
 		if (direction < 0)
 			break;
@@ -99,27 +103,35 @@ int launchGame(int winWidth, int winHeight, int libID){
             timer = previousTimer;
             paused = false;
         }
-		if (game->getSnake()->detectCollision(winWidth, winHeight)){
-			break;
-		};
-        game->getSnake()->update(direction);
-        if (game->checkEat()) {
-            game->getSnake()->addPart();
-            delete(game->getFood());
-            game->setFood(new Food(game->getWinWidth(), game->getWinHeight(), game->getSnake()->getParts(), game->getSquareSize()));
-            game->addScore(300);
-        };
-		if (game->checkBonus()) {
-			game->getSnake()->addPart();
-			delete(game->getBonus());
-			game->setBonus(new Bonus(game->getWinWidth(), game->getWinHeight(), game->getSnake()->getParts()));
-			game->addScore(900);
-		};
-		game->getLibrary()->print(game->getSnake()->getParts(), game->getFood(), game->getBonus(), std::to_string(game->getScore()));
-        game->addScore(1);
-        checkTimer(game->getScore(), &timer);
-        usleep(timer);
-	};
+        if (!paused) {
+            if (game->getSnake()->detectCollision(winWidth, winHeight)) {
+                break;
+            };
+            game->getSnake()->update(direction);
+            if (game->checkEat()) {
+                game->getSnake()->addPart();
+                delete (game->getFood());
+                game->setFood(new Food(game->getWinWidth(), game->getWinHeight(), game->getSnake()->getParts(),
+                                       game->getSquareSize()));
+                game->addScore(300);
+            };
+            if (game->checkBonus()) {
+                game->getSnake()->addPart();
+                delete (game->getBonus());
+                game->addScore(900);
+            };
+            if (seconds % 15 == 0) {
+                game->setBonus(new Bonus(game->getWinWidth(), game->getWinHeight(), game->getSnake()->getParts()));
+
+            }
+            game->getLibrary()->print(game->getSnake()->getParts(), game->getFood(), game->getBonus(),
+                                      std::to_string(game->getScore()));
+            game->addScore(1);
+            checkTimer(game->getScore(), &timer);
+            usleep(timer);
+        }
+
+	}
 	delete game;
 	return 1;
 }

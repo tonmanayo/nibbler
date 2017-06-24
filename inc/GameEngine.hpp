@@ -29,6 +29,9 @@ public:
 	int			getLibId();
     int         getSquareSize();
 
+    bool getRes();
+    void setRes(bool res);
+
 	void        setLibrary(ILibrary* library);
 	void        setLibHandler(void* libHandler);
 	void        setWinWidth(int winWidth);
@@ -61,6 +64,7 @@ private:
 	bool        _bonusAvailable;
 	bool        _gameOver;
 	bool        _exit;
+	bool		_res;
 };
 
 #endif //NIBBLER_GAMEENGINE_HPP

@@ -18,7 +18,6 @@ void Bonus::genBonus(std::vector<SnakePart *> parts) {
     int maxX = _winWidth - 20;
     int maxY = _winHeight - 20;
 
-    seconds = time(NULL);
     std::srand(time(NULL));
     _posX = (std::rand() % (maxX-minX + 1) + minX) /20 * 20;
     _posY = (std::rand() % (maxY-minY + 1) + minY) /20 * 20;
@@ -26,10 +25,10 @@ void Bonus::genBonus(std::vector<SnakePart *> parts) {
         if (_posX == (*it)->getPosX() && _posY == (*it)->getPosY())
             onSnake = true;
     }
-    if (onSnake && (seconds % 15) == 0)
+    if (onSnake)
         genBonus(parts);
     else
-        std::cout << "Bonus generated at X: " << _posX << " Y: " << _posY << std::endl;
+        std::cout << "here Bonus generated at X: " << _posX << " Y: " << _posY << std::endl;
 }
 
 int Bonus::getPosX() {
