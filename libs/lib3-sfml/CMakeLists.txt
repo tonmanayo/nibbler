@@ -16,4 +16,3 @@ if(SFML_FOUND)
 endif()
 
 #set(SFML_INCLUDE_DIR ~/.brew/include/)
-

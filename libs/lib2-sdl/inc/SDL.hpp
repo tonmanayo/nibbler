@@ -21,7 +21,7 @@ public:
 	virtual ~SDL();
 
 	int             keyhook();
-	void            print(std::vector<SnakePart*> snakeParts, Food* food, std::string score);
+	void            print(std::vector<SnakePart*> snakeParts, Food* food, Bonus* bonus, std::string score);
 	void			initText();
 
 private:

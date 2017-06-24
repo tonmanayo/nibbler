@@ -4,8 +4,6 @@
 
 #include "../inc/Food.hpp"
 
-
-
 Food::Food(int winWidth, int winHeight, std::vector<SnakePart*> parts, int squareSize):
         _winWidth(winWidth),
         _winHeight(winHeight),

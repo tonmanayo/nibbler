@@ -123,7 +123,34 @@ SDL/fast:
 	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/build
 .PHONY : SDL/fast
 
-Users/skynet/kgani/projects/year2/c++/nibbler/src/Food.o: Users/skynet/kgani/projects/year2/c++/nibbler/src/Food.cpp.o
+nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.o: nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.cpp.o
+
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.o
+
+# target to build an object file
+nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.cpp.o:
+	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.cpp.o
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.cpp.o
+
+nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.i: nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.cpp.i
+
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.i
+
+# target to preprocess a source file
+nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.cpp.i:
+	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.cpp.i
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.cpp.i
+
+nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.s: nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.cpp.s
+
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.s
+
+# target to generate assembly for a file
+nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.cpp.s:
+	$(MAKE) -f CMakeFiles/SDL.dir/build.make CMakeFiles/SDL.dir/nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.cpp.s
+.PHONY : nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.cpp.s
+
+nfs/zfs-student-6/users/tmack/nibbler/src/Food.o: nfs/zfs-student-6/users/tmack/nibbler/src/Food.cpp.o
 
 .PHONY : Users/skynet/kgani/projects/year2/c++/nibbler/src/Food.o
 
@@ -294,21 +321,24 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... SDL"
-	@echo "... Users/skynet/kgani/projects/year2/c++/nibbler/src/Food.o"
-	@echo "... Users/skynet/kgani/projects/year2/c++/nibbler/src/Food.i"
-	@echo "... Users/skynet/kgani/projects/year2/c++/nibbler/src/Food.s"
-	@echo "... Users/skynet/kgani/projects/year2/c++/nibbler/src/GameEngine.o"
-	@echo "... Users/skynet/kgani/projects/year2/c++/nibbler/src/GameEngine.i"
-	@echo "... Users/skynet/kgani/projects/year2/c++/nibbler/src/GameEngine.s"
-	@echo "... Users/skynet/kgani/projects/year2/c++/nibbler/src/Snake.o"
-	@echo "... Users/skynet/kgani/projects/year2/c++/nibbler/src/Snake.i"
-	@echo "... Users/skynet/kgani/projects/year2/c++/nibbler/src/Snake.s"
-	@echo "... Users/skynet/kgani/projects/year2/c++/nibbler/src/SnakePart.o"
-	@echo "... Users/skynet/kgani/projects/year2/c++/nibbler/src/SnakePart.i"
-	@echo "... Users/skynet/kgani/projects/year2/c++/nibbler/src/SnakePart.s"
-	@echo "... Users/skynet/kgani/projects/year2/c++/nibbler/src/main.o"
-	@echo "... Users/skynet/kgani/projects/year2/c++/nibbler/src/main.i"
-	@echo "... Users/skynet/kgani/projects/year2/c++/nibbler/src/main.s"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.o"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.i"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/Bonus.s"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/Food.o"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/Food.i"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/Food.s"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.o"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.i"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/GameEngine.s"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/Snake.o"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/Snake.i"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/Snake.s"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.o"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.i"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/SnakePart.s"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/main.o"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/main.i"
+	@echo "... nfs/zfs-student-6/users/tmack/nibbler/src/main.s"
 	@echo "... src/SDL.o"
 	@echo "... src/SDL.i"
 	@echo "... src/SDL.s"

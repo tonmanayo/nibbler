@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/Users/skynet/.brew/Cellar/cmake/3.8.2/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/nfs/zfs-student-6/users/tmack/.brew/Cellar/cmake/3.8.1/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -122,6 +122,33 @@ nibbler: cmake_check_build_system
 nibbler/fast:
 	$(MAKE) -f CMakeFiles/nibbler.dir/build.make CMakeFiles/nibbler.dir/build
 .PHONY : nibbler/fast
+
+src/Bonus.o: src/Bonus.cpp.o
+
+.PHONY : src/Bonus.o
+
+# target to build an object file
+src/Bonus.cpp.o:
+	$(MAKE) -f CMakeFiles/nibbler.dir/build.make CMakeFiles/nibbler.dir/src/Bonus.cpp.o
+.PHONY : src/Bonus.cpp.o
+
+src/Bonus.i: src/Bonus.cpp.i
+
+.PHONY : src/Bonus.i
+
+# target to preprocess a source file
+src/Bonus.cpp.i:
+	$(MAKE) -f CMakeFiles/nibbler.dir/build.make CMakeFiles/nibbler.dir/src/Bonus.cpp.i
+.PHONY : src/Bonus.cpp.i
+
+src/Bonus.s: src/Bonus.cpp.s
+
+.PHONY : src/Bonus.s
+
+# target to generate assembly for a file
+src/Bonus.cpp.s:
+	$(MAKE) -f CMakeFiles/nibbler.dir/build.make CMakeFiles/nibbler.dir/src/Bonus.cpp.s
+.PHONY : src/Bonus.cpp.s
 
 src/Food.o: src/Food.cpp.o
 
@@ -267,6 +294,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... nibbler"
+	@echo "... src/Bonus.o"
+	@echo "... src/Bonus.i"
+	@echo "... src/Bonus.s"
 	@echo "... src/Food.o"
 	@echo "... src/Food.i"
 	@echo "... src/Food.s"
